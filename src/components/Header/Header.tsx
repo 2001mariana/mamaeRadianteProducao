@@ -7,11 +7,11 @@ function Header() {
 
   function getTitleByLanguage(language: 'PT' | 'ES' | 'ENG' | '') {
     if (language === 'ES') {
-      return 'Universo de las embarazadas'
+      return 'Mamá Radiante'
     } else if (language === 'PT') {
-      return 'Universo das gestantes'
+      return 'Mamãe Radiante'
     } else {
-      return "Pregnant women's universe"
+      return "Radiant Mom"
     }
   }
 
