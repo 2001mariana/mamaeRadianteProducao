@@ -1,0 +1,42 @@
+.App {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  color: #0c3a76;
+  background-image: linear-gradient(90deg,#ffecd2,#fcb69f,#fcb69f);
+}
+.App--content {
+  height: 100vh;
+}
+.Home__carrossel {
+  width: 60%;
+  height: 100%;
+}
+div.Home > div.Home__carrossel > div.slider-container {
+  height: 100%;
+}
+.Home__carrossel--item {
+  height: 100%;
+}
+.slider-control-bottomcenter ul{
+  list-style: none 
+}
+.slider-control-bottomcenter ul li.paging-item{
+  background-color: #ffffff90;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+.slider-control-bottomcenter ul li button{
+  padding: 8px;
+  border-radius: 10px;
+}
+.slider-control-bottomcenter ul li button svg{
+  display: none;
+}
+.slider-control-bottomcenter ul li.paging-item.active{
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 720px) {
+  .Home__carrossel { width: 100%; }
+}

@@ -1,0 +1,26 @@
+.Aprendizados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Aprendizados__items {
+    max-width: 80%;
+  }
+
+  .Aprendizados__item {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    padding: 14px 0;
+    border-bottom: 1px solid #ffffff50;
+  }
+
+  .Aprendizados__item--icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 6px;
+    margin-right: 6px;
+    color: #ffffff90;
+  }

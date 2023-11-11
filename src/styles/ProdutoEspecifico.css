@@ -1,0 +1,339 @@
+.ProdutoEspecifico {
+    height: 100vh;
+    overflow: auto;
+    background-color: #00000090;
+}
+.ProdutoEspecifico__Headline {
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.ProdutoEspecifico__image {
+    height: 100%;
+    width: 45%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ProdutoEspecifico__preco-aviso { color: #d11f12; font-size: 0.85rem; width: 90%; padding-bottom: 12px; }
+.MyImageCardCuidado {
+  width: 80%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 4% auto;
+  border: 1px solid #FFFFFF80;
+}
+.MyImageCardCuidado.mobile { display: none; }
+.ProdutoEspecifico__image img { height: 90%; width: auto; }
+.ProdutoEspecifico__content {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.Round__text--white {
+  background-color: #E6E6FA;
+  color: #0C3A76;
+  border: 1px solid #0C3A76;
+  padding: 20px;
+  margin: 24px auto;
+  width: 70%;
+  min-width: 310px;
+  border-radius: 22px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 10px #FFFFFF80, 0 2px 20px #0C3A76, 4px 4px 10px #0C3A76; 
+}
+.ProdutoEspecifico__tittle {
+  flex-direction: column;
+  width: 90%;
+  font-size: 32px;
+  line-height: 48px;
+  height: auto;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 800;
+  margin: 14px auto;
+}
+.ProdutoEspecifico__content--description {
+    width: 100%;
+    padding: 14px 0;
+    text-align: justify;
+    line-height: 32px;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.ProdutoEspecifico__content--buy {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+}
+.ProdutoEspecifico__bonus {
+    height: 100%;
+    padding: 2% 5%;
+    display: flex;
+    flex-direction: column;
+}
+.ProdutoEspecifico__headline--image {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ProdutoEspecifico__headline--image img { height: 90%; width: auto; }
+.ProdutoEspecifico__por-apenas { font-size: 30px; padding: 6px 0; }
+#headline--gravidez-radiante div.ProdutoEspecifico__headline--subtittle { padding: 12px; }
+.ProdutoEspecifico__headline--subtittle {
+  line-height: 42px;
+  font-size: 22px;
+  padding: 12px 0;
+  text-align: justify;
+}
+.ProdutoEspecifico__headline--subtittle.column { display: flex; flex-direction: column;}
+.ProdutoEspecifico__headline--foco { font-weight: 600; }
+.ProdutoEspecifico__headline--content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  line-height: 32px;
+  font-weight: 100;
+  font-size: 18px;
+  padding: 1%;
+}
+.ProdutoEspecifico__preco-antigo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 14px 0 24px 0;
+}
+.preco-antigo {
+  color: #d11f12;
+  font-size: 32px;
+  line-height: 34px;
+  font-weight: 800;
+  padding: 24px;
+}
+.preco-antigo > div > svg {
+    height: 180px !important;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+.preco-novo {
+  text-shadow: 1px 1px 0.5px black;
+  color: #41be14;
+  font-size: 64px;
+  line-height: 68px;
+  font-weight: 800;
+  padding: 28px 0;
+}
+.ProdutoEspecifico__headline--button-buy { padding-top: 8%; }
+.animation-pulse {
+  animation: hover 1.5s ease-in-out infinite;
+}
+.Aprendizados, .Capitulos {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem 12px 4rem;
+}
+.ProdutoEspecifico__headline--itens {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3rem;
+  gap: 2rem;
+}
+.ProdutoEspecifico__headline--itens > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  font-weight: 400;
+  border: 1px solid #00000010;
+  border-radius: 12px;
+  min-width: 200px;
+  flex: 1;
+}
+.ProdutoEspecifico__headline--button-false{ display: none; }
+.ProdutoEspecifico__headline--button-true {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+}
+.ProdutoEspecifico__headline--itens > div > div > img { height: 80px; width: auto; }
+.ProdutoEspecifico__funil { height: 75%; }
+.ProdutoEspecifico__funil > .ProdutoEspecifico__funil--confetti {
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.ProdutoEspecifico__funil--confetti > div { height: 100%; width: 25%; }
+.ProdutoEspecifico__funil--confetti > div svg { height: 100%; }
+.dynamic__image { display: none; }
+.fraseEmbaixoDoTextIsolada {
+  font-size: 32px;
+  line-height: 64px;
+  padding: 60px;
+}
+@media only screen and (max-width: 1200px) {
+  .dynamic__image {
+    display: flex;
+    height: 85vh;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dynamic__image img { height: 100%; width: auto; }
+  div.ProdutoEspecifico__Headline > div.ProdutoEspecifico__image, 
+  div.HeadlineFinal.HeadlineBonus > div > div.HeadlineBonus__content--image,
+  div.HeadlineBonus__content > div.HeadlineBonus__content--image {
+    display: none;
+  }
+}
+.ProdutoEspecifico__funil--parabens {
+  letter-spacing: 0.1em;
+  font-size: 40px;
+  line-height: 64px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+  padding: 0 10%;
+  transition: font-size 1s;
+  position: relative;
+  top: -135px;
+}
+@media only screen and (max-width: 1280px) {
+  .HeadlineFinalBonus { padding: 0; }
+  .HeadlineFinal.HeadlineBonus .HeadlineBonus__content--text { padding: 0 4%; }
+}
+@media only screen and (max-width: 1100px) {
+  .ProdutoEspecifico__image { width: 45%; }
+  .ProdutoEspecifico__content { width: 55%; }  
+  .Depoimentos { height: auto; }
+  .Depoimentos--images { flex-wrap: wrap; padding: 2%; }
+  .Depoimentos--images > .Depoimento { margin: 5%; } 
+  .HeadlineFinal.HeadlineBonus .HeadlineBonus__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .MyImageCardCuidado { width: 90%; }
+  .HeadlineFinal.HeadlineBonus .HeadlineBonus__content--image { width: 45%; } 
+  .HeadlineFinal.HeadlineBonus .HeadlineBonus__content--text{ width: 55%; padding: 0 2%; }
+  .ProdutoEspecifico__funil--confetti > div { width: 35%; }
+  .ProdutoEspecifico__video { width: 60% !important; }  
+}
+@media only screen and (max-width: 920px) {
+  .ProdutoEspecifico__content { padding: 2%; }  
+  .HeadlineFinal.HeadlineBonus { height: auto; }
+  .ProdutoEspecifico__funil--parabens { top: -150px; }
+  .MyImageCardCuidado { width: 100%; }
+  .ProdutoEspecifico__video { width: 70% !important; }  
+}
+@media only screen and (max-width: 880px) {
+  .ProdutoEspecifico__Headline { display: flex; height: auto; }
+  .ProdutoEspecifico__image { width: 100%; height: 60vh; }
+  .ProdutoEspecifico__content { width: 100%; padding: 5%; height: auto; } 
+  .ProdutoEspecifico__funil--confetti > div { width: 50%; }
+  .ProdutoEspecifico__funil--confetti > div:nth-child(3n) { display: none; }
+  .ProdutoEspecifico__funil--parabens { font-size: 34px; }
+}
+@media only screen and (max-width: 750px) {
+  .Depoimentos--images > .Depoimento { margin: 1%; }        
+  .HeadlineFinal.HeadlineBonus .HeadlineBonus__content--text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dynamic__image { height: auto; min-height: 65vh; }
+  .ProdutoEspecifico__funil--parabens {
+    font-size: 32px;
+    line-height: 38px;
+    top: -95px;
+  }
+  .ProdutoEspecifico__funil > .ProdutoEspecifico__funil--confetti { height: 65%; }
+  .ProdutoEspecifico__video { width: 80% !important; height: 55% !important; }  
+}
+@media only screen and (max-width: 660px) {  
+  div.HeadlineFinal.HeadlineBonus .dynamic__image img { height: auto; max-width: 110% !important; }
+  div.HeadlineFinal.HeadlineBonus > div.HeadlineBonus__content.second-option > div.car { display: flex; flex-direction: column; }
+  div.HeadlineFinal.HeadlineBonus > div.HeadlineBonus__content.second-option > div.car > img { width: 80vw; }
+  .ProdutoEspecifico__funil--parabens { top: -75px; }
+  .MyImageCardCuidado.desktop { display: none !important; }
+  .MyImageCardCuidado.mobile { display: block !important; }
+  .MyImageCardCuidado { width: 90%; margin: 8% auto;}
+  .ProdutoEspecifico__video { height: 50% !important; }  
+}
+@media only screen and (max-width: 600px) {  
+  div.HeadlineFinal.HeadlineBonus .dynamic__image img { max-width: 120% !important; } 
+  .ProdutoEspecifico__funil--parabens { font-size: 32px; }
+  .ProdutoEspecifico__funil > .ProdutoEspecifico__funil--confetti { height: 55%; }
+}
+@media only screen and (max-width: 560px) {  
+  div.HeadlineFinal.HeadlineBonus .dynamic__image img { max-width: 130% !important; }
+} 
+@media only screen and (max-width: 520px) {
+  .HeadlineFinal.HeadlineBonus .ProdutoEspecifico__headline--button-buy {
+    height: 140px;
+    width: 90%;
+    padding-top: 15%;
+  }    
+  .HeadlineFinal.HeadlineBonus .HeadlineBonus__content--text { height: auto !important; }    
+  .ProdutoEspecifico__funil--confetti > div { width: 100%; }
+  .dynamic__image { height: 65vh; }
+  div.HeadlineFinal.HeadlineBonus .dynamic__image img { max-width: 135% !important; }
+  div.ProdutoEspecifico__funil > div.ProdutoEspecifico__funil--confetti > div:nth-child(2) {
+    display: none;
+  }
+  .ProdutoEspecifico__video { width: 90% !important; height: 40% !important; } 
+  .video__button-cta { padding-top: 6% !important; } 
+}
+@media only screen and (max-width: 480px) {  
+  div.HeadlineFinal.HeadlineBonus .dynamic__image img { max-width: 140% !important; } 
+  .dynamic__image { height: auto; min-height: auto !important; }
+  .preco-novo { font-size: 60px; }
+  .ProdutoEspecifico__video { width: 100% !important; } 
+}
+@media only screen and (max-width: 420px) {  
+  div.HeadlineFinal.HeadlineBonus .dynamic__image img { max-width: 150% !important; } 
+  .ProdutoEspecifico__funil > .ProdutoEspecifico__funil--confetti { height: 40%; }
+}
+@media only screen and (max-width: 380px) {  
+  div.HeadlineFinal.HeadlineBonus .dynamic__image img { max-width: 155% !important; } 
+  .ProdutoEspecifico__content, div.HeadlineBonus__content > div.HeadlineBonus__content--text { padding: 0 2%; }
+  .ProdutoEspecifico__funil--parabens { font-size: 26px; line-height: 28px; }
+}
+@media only screen and (max-width: 340px) {  
+  div.HeadlineFinal.HeadlineBonus .dynamic__image img { max-width: 160% !important; } 
+}
+@media only screen and (max-width: 320px) {  
+  div.HeadlineFinal.HeadlineBonus .dynamic__image img { max-width: 165% !important; }
+}

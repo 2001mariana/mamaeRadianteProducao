@@ -1,0 +1,78 @@
+.Garantia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 0.1em;
+    min-height: 75%;
+    height: auto;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 2rem 0;
+}
+.Garantia__image {padding: 1rem 0 3rem 0;}
+.Garantia > .Garantia__tittle > span.Garantia__days { font-size: 92px; } 
+.Garantia > .Garantia__tittle {
+  font-size: 60px;
+  line-height: 64px;
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+}
+.Garantia__text {
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 200;
+  text-align: center;
+  padding: 12px 0;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.Garantia--Purple {
+  color: #b9ffff;
+  text-shadow: 
+      0 0 5px #ab3ed8, 
+      0 0 15px #ab3ed8, 
+      0 0 20px #ab3ed8, 
+      0 0 40px #ab3ed8, 
+      0 0 60px black, 
+      0 0 10px #40cfff, 
+      0 0 98px black;
+} 
+.Garantia--Green {
+    color: #b3f6ac;
+    text-shadow: 
+        0 0 5px #3ed850, 
+        0 0 15px #3ed850, 
+        0 0 20px #3ed850, 
+        0 0 40px #3ed850, 
+        0 0 60px black, 
+        0 0 10px #4b960a, 
+        0 0 98px black;
+}
+.Garantia--Orange {
+  color: #f6d0ac;
+  text-shadow: 
+    0 0 5px #f06f1b, 
+    0 0 15px #f06f1b, 
+    0 0 20px #f06f1b, 
+    0 0 40px #f06f1b, 
+    0 0 60px black, 
+    0 0 10px #f16725, 
+    0 0 98px black;
+}
+.Garantia--Blue {
+    color: #0C3A76;
+    text-shadow: 2px 2px 20px #cdddf2, 0 0 10px #ab3ed8, 2px 2px 8px #ffffff;
+}
+/* @media only screen and (max-width: 880px) {
+  .Garantia {
+      height: 80%;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .Garantia {
+      height: 70%;
+  }
+} */

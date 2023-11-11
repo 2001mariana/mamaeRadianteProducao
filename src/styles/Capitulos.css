@@ -1,0 +1,28 @@
+ol.lista-capitulos {
+    list-style: none;
+    color: #ffffff80;
+  }
+  
+  ol.lista-capitulos li.Capitulo {
+    border: 1px solid #ffffff35;
+    font: bold 24pt helvetica, arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    align-items: center;
+    background-color: #ffffff30;
+    border-radius: 6px;
+    margin: 8px 0;
+    box-shadow: 0 0 5px #ab3ed8, 0 2px 20px black, 0 0 10px #40cfff;
+  }
+  
+  li.Capitulo p.capitulo--text {
+    font: 12pt helvetica, arial, sans-serif;
+    padding-left: 12px;
+  }
+  
+  span.capitulo--number {
+    line-height: 25px;
+    border-right: 1px solid #ffffff90;
+    padding: 0 6px 0 0;
+  }

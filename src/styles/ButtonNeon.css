@@ -1,0 +1,81 @@
+.Button--neon { margin: auto; border-radius: 40px; color: #ffffff; }
+.Button { display: flex; flex-direction: row; align-items: center; justify-content: center; }
+.Button__children { padding-right: 6px; }
+.Button__isRounded--true { border-radius: 40px; }
+.Button__isRounded--false { border-radius: 8px; }
+.Button--Large {
+  padding: 16px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  margin: auto;
+}
+.Button--Small {
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  margin: auto;
+}
+.Button--neon.Button--Purple {
+  box-shadow:
+  inset 0 0 100px #ce5ce5,
+  inset 40px 0 40px #020265,
+  inset -20px 0 40px #aa1caa,
+  inset 20px 0 200px #020265,
+  inset -20px 0 200px #aa1caa,
+    0 0 100px #ce5ce5,
+    0 0 40px #020265,
+    0 0 20px #aa1caa;
+}
+
+.Button--neon.Button--Green {
+  text-shadow: 1px 1px 2px black;
+  border: 1px solid #51e82f;
+  box-shadow: 
+  inset 0 0 100px #21930d, 
+  inset 40px 0 40px #14b633, 
+  inset -20px 0 40px #37f320, 
+  inset 20px 0 200px #46d81c, 
+  inset -20px 0 200px #13da30, 
+    0 0 20px #36e213, 
+    0 0 20px #51e82f, 
+    0 0 20px #5def3d;
+}
+
+.Button--neon.Button--Green-blue {
+  text-shadow: 1px 1px 2px black;
+  border: 1px solid #16714f;
+  box-shadow: 
+  inset 0 0 100px #127b45, 
+  inset 40px 0 40px #16b05e, 
+  inset -20px 0 40px #15784b, 
+  inset 20px 0 200px #168b56, 
+  inset -20px 0 200px #138057, 
+    0 0 100px #17734a, 
+    0 0 20px #118552, 
+    0 0 20px #0f5e3e;
+}
+
+.Button--neon.Button--Orange {
+  box-shadow: inset 0 0 100px #f08310, inset 40px 0 40px #fbc10d, inset -20px 0 40px #f16725, inset 20px 0 200px #f06f1b, inset -20px 0 200px #d37a0c, 0 0 100px #a34312, 0 0 40px #fa7632, 0 0 20px #db9912;
+}
+
+.Button--shake {
+  animation: shake 2s linear infinite;
+}
+
+@keyframes shake { 
+  25% { 
+    -webkit-transform: rotate(2deg);
+    transform:rotate(2deg); 
+  } 
+  50% { 
+    -webkit-transform: rotate(0deg);
+    transform:rotate(0deg); 
+  }
+  75% { 
+  -webkit-transform: rotate(-2deg);
+  transform:rotate(-2deg);
+  } 
+}

@@ -1,0 +1,68 @@
+.CapituloAndPrevia {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+.CapituloAndPrevia__conteudo { display: flex; flex-direction: row; height: 100%; }
+.CapituloAndPrevia__conteudo > .Capitulos { width: 50%; }
+.CapituloAndPrevia__conteudo > .Previa {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6%;
+}
+.Previa > div.slider-container {height: calc(100% - 70px);}
+.Previa__max-heigth {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.Previa__max-heigth > .Previa__imagem {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Previa__max-heigth > .Previa__imagem img {
+  height: 100%; width: auto; box-shadow: 0 0 5px #ab3ed8, 0 2px 20px #000, 0 0 10px #40cfff;
+}
+.Previa__max-heigth .slider-container { height: 100% !important; }
+.slider-frame { height: 100% !important; }
+.slider-frame  div.slider-list { height: 90% !important; }
+.slide slide-current slide-visible { height: 90%; }
+@media only screen and (max-width: 1200px) {
+  .CapituloAndPrevia__conteudo .Capitulos { width: 48%; }
+  .CapituloAndPrevia__conteudo > .Previa { padding: 0 4%; width: 52%; }
+}
+@media only screen and (max-width: 1050px) {
+  .CapituloAndPrevia__conteudo .Capitulos { padding: 0 2%; }
+  .CapituloAndPrevia__conteudo > .Previa { padding: 0 2%; }
+}
+@media only screen and (max-width: 1000px) {
+  .CapituloAndPrevia__conteudo > .Previa { padding: 0; }
+}   
+@media only screen and (max-width: 880px) {
+  .CapituloAndPrevia__conteudo .Capitulos { width: 45%; }
+  .CapituloAndPrevia__conteudo > .Previa { width: 55%; }
+}   
+@media only screen and (max-width: 800px) {
+  .CapituloAndPrevia__conteudo { display: flex; flex-direction: column; height: 200%; }
+  .CapituloAndPrevia__conteudo .Capitulos { width: 100%; min-height: auto; }
+  .CapituloAndPrevia__conteudo > .Previa { width: 100%; height: 100vh; padding: 0 6%; }
+  .CapituloAndPrevia { height: auto; }
+}       
+@media only screen and (max-width: 700px) { .Aprendizados__items { max-width: 90% !important; } }       
+@media only screen and (max-width: 600px) {
+  .Aprendizados { padding: 0 1rem 4rem 1rem; }
+  .ProdutoEspecifico__tittle { height: auto; }
+  .Previa__max-heigth > .Previa__imagem { width: 90%; }
+  svg.Home__carrossel--seta { border: 1px solid #00000050; background-color: #00000030; border-radius: 50%; }
+}
+@media only screen and (max-width: 400px) {
+  .CapituloAndPrevia__conteudo > .Previa { padding: 0; }
+  .Previa__max-heigth > .Previa__imagem img { height: 90%; width: auto; }
+}

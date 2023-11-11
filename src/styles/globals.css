@@ -1,0 +1,50 @@
+@import url(Produtos.css);
+@import url(ProdutoEspecifico.css);
+@import url(Header.css);
+@import url(CardEbook.css);
+@import url(App.css);
+@import url(ButtonNeon.css);
+@import url(ButtonOutlined.css);
+@import url(CardNeon.css);
+@import url(CardBonus.css);
+@import url(Garantia.css);
+@import url(Faq.css);
+@import url(CapitulosAndPrevia.css);
+@import url(Aprendizados.css);
+@import url(Capitulos.css);
+@import url(Depoimento.css);
+@import url(tag-gravidez-radiante.css);
+@import url(BeneficiosBonus.css);
+@import url(Scrollbar.css);
+@import url(HeadlineBonus.css);
+@import url(NotFound.css);
+@import url(SearchAnimation.css);
+@import url(Page404.css);
+@import url(LupaLoading.css);
+@import url(Animacoes.css);
+
+.ProdutoEspecifico__video {
+  height: 60%;
+  width: 50%;
+  margin: 1% auto;
+}
+
+.video__button-cta { padding: 2%; }
+
+@tailwind base;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+

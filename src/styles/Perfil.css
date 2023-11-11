@@ -1,0 +1,117 @@
+.Perfil__info--azul, .Perfil__info--rosa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    /* width: 80%; */
+    /* padding: 5% 3%; */
+    position: relative;
+    border-radius: 16px;
+    z-index: 1;
+    /* min-width: 300px;
+    width: 350px; */
+}
+
+.Perfil__info--azul::before, .Perfil__info--azul::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #040847, #090f68 , #000AA6,#001aff, #0079CC,#0054B9, #0050DE,#007CF8, #00A3F5, #0099ff);
+    background-size: 300%;
+    border-radius: 16px;
+    animation: Anima-background 20s linear infinite alternate;
+    opacity: 0.6;
+}
+
+.Perfil__info--rosa::before, .Perfil__info--rosa::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #CC008E,#ff00b2, #f400a1,#FF19B9, #FF33C1, #FF66D0, #FF7FD8, #FF99E0);
+    background-size: 300%;
+    border-radius: 16px;
+    animation: Anima-background 20s linear infinite;
+    opacity: 0.6;
+}
+
+.Perfil__info--azul::after, .Perfil__info--rosa::after {
+   filter: blur(50px);
+}
+
+.Perfil__nome {
+    font-size: 1.4rem;
+    padding: 10px 0;
+}
+
+.Perfil__foto {
+    height: 16rem;
+    width: 16rem;
+    clip-path: circle(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.Perfil__foto img {
+    height: 16rem;
+}
+
+.Perfil__redes {
+    display: flex;
+    flex-direction: column;
+}
+
+.Perfil__redes--conteudo {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 10px 6px;
+    border-radius: 8px;
+    margin: 8px 0;
+    transition: background-color 0.75s,  opacity 0.25s;
+}
+
+.Perfil__redes--conteudo:hover {
+    cursor: pointer;
+    background: #ffffff40;
+}
+
+.Perfil__redes--conteudo svg {
+    margin-right: 8px;
+}
+
+.Perfil__descricao {
+    font-weight: 200;
+    font-style: italic;
+    padding: 10px 0;
+    width: 80%;
+}
+
+.Perfil__funcao {
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 80%;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes Anima-background {
+    0% {
+      background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+  }

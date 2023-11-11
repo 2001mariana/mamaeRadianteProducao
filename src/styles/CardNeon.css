@@ -1,0 +1,33 @@
+.CardNeon {
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+.CardNeon--text { padding: 4px; height: 72%; }
+.CardNeon > .CardNeon--header { height: 14%; border-radius: 20px 20px 0 0; }
+.CardNeon > .CardNeon--footer { height: 14%; border-radius: 0 0 20px 20px; }
+.CardNeon--Purple {
+  box-shadow:
+    inset 0 0 15px black,
+    inset 5px 0 40px #0C3A76,
+    0 0 15px magenta,
+    -5px 0 80px #0C3A76
+}
+.CardNeon--Blue {box-shadow: 0 0 10px #0c3a76, 0 2px 20px #0C3A76, 4px 4px 10px #cdddf2; }
+.CardNeon--White { box-shadow: 0 0 10px #FFFFFF, 0 2px 20px #FFFFFF, 4px 4px 10px #cdddf2; }
+.ProdutoEspecifico__headline--itens > div.CardNeon--White.infinity > div {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ProdutoEspecifico__headline--itens > div.CardNeon--White.infinity img { height: 60px; }
+.CardNeon.CardNeon--Blue > .CardNeon--header { background-color: #0C3A7660; }
+.CardNeon.CardNeon--Blue > .CardNeon--footer {   background-color: #0C3A7660; }
+.CardNeon.CardNeon--Purple > .CardNeon--header { background-color: #ab3ed860; }
+.CardNeon.CardNeon--Purple > .CardNeon--footer { background-color: #ab3ed860; }
+@media only screen and (max-width: 400px) {.CardNeon { width: 70%; }}

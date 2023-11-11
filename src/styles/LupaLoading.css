@@ -1,0 +1,6 @@
+.LupaLoading, .LupaLoading > div {
+    height: 100vh;
+}
+.LupaLoading > div > svg {
+    height: 100%;
+}

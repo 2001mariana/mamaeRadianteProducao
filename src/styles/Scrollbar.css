@@ -1,0 +1,38 @@
+.ProdutoEspecifico::-webkit-scrollbar, .Produtos::-webkit-scrollbar {
+  width: 8px;
+}
+    
+.ProdutoEspecifico::-webkit-scrollbar-track, .Produtos::-webkit-scrollbar-track {
+  background: transparent;
+}
+    
+.ProdutoEspecifico::-webkit-scrollbar-thumb, .Produtos::-webkit-scrollbar-thumb {
+  background-color: #ffffff80;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 450px) {
+    .Contato::-webkit-scrollbar {
+      width: 8px;
+    }
+    .Contato::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .Contato::-webkit-scrollbar-thumb {
+      background-color: #ffffff80;
+      border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .Sobre::-webkit-scrollbar {
+    width: 8px;
+  }
+  .Sobre::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .Sobre::-webkit-scrollbar-thumb {
+    background-color: #ffffff80;
+    border-radius: 20px;
+  }
+}
