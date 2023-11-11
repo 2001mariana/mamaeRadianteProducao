@@ -4,7 +4,7 @@ import telegram from '../../assets/icons/telegram.svg'
 import whatsapp from '../../assets/icons/whatsapp.svg'
 import infinity from '../../assets/icons/infinity.svg'
 import cadeadoAberto from '../../assets/icons/novo-cadeado.svg'
-import vip from '../../assets/icons/vip.svg'
+import vip from '../../assets/icons/grupo-vip.svg'
 
 import { Suspense } from 'react'
 import SearchAnimaton from '../SearchAnimaton'
