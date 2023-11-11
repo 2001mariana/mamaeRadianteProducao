@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { LanguageContext } from "@/pages/_app";
 import LanguageControl from "../LanguageControl";
 import Image from "next/image";
-import logo from '../../assets/img/logo-mamae-radiante-azul.png'
+import logo from '../../assets/img/logo-azul.svg'
 
 function Header() {
   const {contextValue }  = useContext(LanguageContext);
