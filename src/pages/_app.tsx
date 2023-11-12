@@ -44,7 +44,10 @@ export default function App({ Component, pageProps }: AppProps) {
                     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                     <meta name="facebook-domain-verification" content="lugupjkdi297w32zr8z18fbydhzxl6" />                
                 </Head>
-                <Script
+                <LanguageContext.Provider value={{updateContext: updateSelectedLanguage, contextValue: defaultBrowserLanguage}}>
+                    <div className='App--content'>
+                        <Component {...pageProps} />
+                        <Script
                   id="fb-pixel"
                   strategy="afterInteractive"
                   dangerouslySetInnerHTML={{
@@ -62,9 +65,6 @@ export default function App({ Component, pageProps }: AppProps) {
                     `,
                   }}
                 />
-                <LanguageContext.Provider value={{updateContext: updateSelectedLanguage, contextValue: defaultBrowserLanguage}}>
-                    <div className='App--content'>
-                        <Component {...pageProps} />
                     </div>
                 </LanguageContext.Provider>
             </div>
