@@ -24,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <Head>
                     <title>Mamãe Radiante</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+                    <meta name="facebook-domain-verification" content="lugupjkdi297w32zr8z18fbydhzxl6" />
                 </Head>
                 <LanguageContext.Provider value={{updateContext: updateSelectedLanguage, contextValue: defaultBrowserLanguage}}>
                     <div className='App--content'>
