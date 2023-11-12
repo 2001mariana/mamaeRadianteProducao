@@ -1,6 +1,7 @@
 import Ebook from '@/interfaces/Ebook';
-import { lazy } from 'react';
+import { lazy, useEffect } from 'react';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import * as fbq from '../../lib/fpixel'
 
 const Carousel = lazy(() => import('nuka-carousel'));
 const Garantia = lazy(() => import('@/components/Garantia'));
@@ -23,6 +24,17 @@ interface TelaProdutoProps { ebookAtual: Ebook }
 
 function TelaProduto({ebookAtual}: TelaProdutoProps) {
   const deveExibirPreco = (ebookAtual.bonus.exibirPrecoAposBeneficios && ebookAtual.bonus.exibirPrecoBonus);
+  const uuidRotaParabens = '2742f4da-4f27-45d6-b3bc-bca71385ed57';
+
+  const purchaseEventParabens = () => {
+    fbq.event('Purchase', { currency: 'BRL', value: 49.99 })
+  }
+  
+  useEffect(() => {
+    if (ebookAtual.uuid === uuidRotaParabens) {
+      purchaseEventParabens()
+    }
+  },[ebookAtual.uuid])
 
   return (
     <div className='ProdutoEspecifico' id={`headline--${ebookAtual.idStyledByProduct}`}>
