@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/meus/HeadlineFinal"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/meus/HeadlineFinal", "src/lib/fpixel.js"],
   "exclude": ["node_modules"]
 }
