@@ -8,12 +8,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     color: 'Green' | 'Purple' | 'Orange' | 'none'
     size: 'Large' | 'Small'
     children?: JSX.Element
+    id?:string
     isRounded?: boolean
     animation?: 'shake'
     className?: string
 }
 
-function Button({ text, variant, color, size, isRounded = true, className, animation, children, ...props }: ButtonProps) {
+function Button({ text, variant, color, size, isRounded = true, className, id, animation, children, ...props }: ButtonProps) {
 
     const buttonClasses = classNames(
         'Button',
@@ -28,7 +29,7 @@ function Button({ text, variant, color, size, isRounded = true, className, anima
       const buttonChildrenClasses = (children ? 'Button__children' : '')
 
   return (
-    <button className={buttonClasses} {...props}>
+    <button id={id} className={buttonClasses} {...props}>
         <span className={buttonChildrenClasses}>{children}</span>
         <div className='Button__title'>{text}</div>
     </button>
