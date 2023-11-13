@@ -48,6 +48,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       <Headline 
         descricaoEbook={ebookAtual.descricao} 
         nameEbook={ebookAtual.nome} 
+        nameEbookButton={ebookAtual.nomeEbook}
         textButtonToBuy={ebookAtual.textButtonToBuy} 
         urlComprarProduto={ebookAtual.urlComprarProduto}
         urlCapaEbook={ebookAtual.urlImageCapa}
@@ -57,6 +58,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         aprendizados={ebookAtual.aprendizados} 
         language={ebookAtual.linguagem} 
         textButtonToBuy={ebookAtual.textButtonToBuy} 
+        nameEbookButton={ebookAtual.nomeEbook}
         urlComprarProduto={ebookAtual.urlComprarProduto}
         urlCardAposBeneficios={ebookAtual.urlCardAposBeneficios}
         tituloBeneficios={ebookAtual.tituloBeneficios}
@@ -94,6 +96,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       
       <Depoimentos 
         textButtonToBuy={ebookAtual.textButtonToDepoimentos} 
+        nameEbookButton={ebookAtual.nomeEbook}
         language={ebookAtual.linguagem} 
         urlImagesDepoimentos={ebookAtual.urlImagesDepoimentos} 
         tituloDepoimentos={ebookAtual.tituloDepoimentos}
@@ -131,6 +134,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
           shouldShowButtonBuy={false}
           textButtonToBuy=""
           urlComprarProduto=""
+          nameEbookButton="falar-com-mariana"
           fraseEmbaixoDoPreco={ebookAtual.bonus.fraseEmbaixoDoPreco}
           avisoEmbaixoDoPreco={ebookAtual.avisoEmbaixoDoPreco}
         />
@@ -152,6 +156,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         precoMaiorAdquirindoTodos={ebookAtual.bonus.precoMaiorAdquirindoTodos}
         precoMenorAdquirindoTodos={ebookAtual.bonus.precoMenorAdquirindoTodos}
         textButtonToBuy={ebookAtual.textButtonToBuy}  
+        nameEbookButton={ebookAtual.nomeEbook}
         textButtonToBuyPackBonus={ebookAtual.textButtonToBuyPackBonus}
         existeTerceiroBonus={ebookAtual.existeTerceiroBonus}
         urlComprarProduto={ebookAtual.urlComprarProduto}

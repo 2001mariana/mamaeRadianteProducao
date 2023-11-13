@@ -4,6 +4,7 @@ import Preco from "../Preco";
 import MyImage from "../MyImageLazy";
 import Link from "next/link";
 import Button from "../Button";
+import { rotasParabens } from "@/data/Produtos/ProdutosDisponiveis";
 
 interface HeadlineFinalProps {
     moeda: '€' | 'R$' | '$'
@@ -12,6 +13,7 @@ interface HeadlineFinalProps {
     precoMenor: string
     titulo?: string[]
     textButtonToBuy: string
+    nameEbookButton: string
     avisoEmbaixoDoPreco: string
     urlComprarProduto: string
     urlComprarPackBonus?: string
@@ -31,7 +33,8 @@ const HeadlineFinal = ({
     precoMaior, 
     precoMenor, 
     titulo,
-    textButtonToBuy, 
+    textButtonToBuy,
+    nameEbookButton, 
     language,
     existeTerceiroBonus,   
     avisoEmbaixoDoPreco,
@@ -54,7 +57,9 @@ const HeadlineFinal = ({
     const bonusComboWithPrice = (bonusSecondOption && precoMaiorAdquirindoTodos !== undefined && precoMenorAdquirindoTodos !== undefined);
 
   function shouldShowButton(widthSize: number) {
-    if (widthSize < 1040 ) {
+    if (rotasParabens.includes(nameEbookButton)) {
+      return true
+    } else if (widthSize < 1040 ) {
       return false
     } else {
       return true
@@ -109,6 +114,7 @@ const HeadlineFinal = ({
             precoMaior={precoMaior}
             precoMenor={precoMenor}
             textButtonToBuy={textButtonToBuy}
+            nameEbookButton={`${nameEbookButton}-4`}
             urlComprarProduto={urlComprarProduto}
             shouldShowButtonBuy={shouldShowButton(windowSize)}
             avisoEmbaixoDoPreco={avisoEmbaixoDoPreco}
@@ -140,6 +146,7 @@ const HeadlineFinal = ({
                 precoMaior={precoMaiorAdquirindoTodos}
                 precoMenor={precoMenorAdquirindoTodos}
                 textButtonToBuy={textButtonPack}
+                nameEbookButton={`${nameEbookButton}-4`}
                 urlComprarProduto={urlPackBonus}
                 shouldShowButtonBuy={shouldShowButton(windowSize)}
                 avisoEmbaixoDoPreco={avisoEmbaixoDoPreco}
@@ -155,6 +162,7 @@ const HeadlineFinal = ({
             variant='neon' 
             color='Green' 
             size='Large' 
+            id={`${nameEbookButton}-4`}
             text={textButtonPack} 
           />
         </Link>

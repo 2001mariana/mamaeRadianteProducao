@@ -7,11 +7,12 @@ interface HeadlineProps {
     textButtonToBuy: string
     urlComprarProduto: string
     nameEbook: string
+    nameEbookButton: string
     descricaoEbook: string[]
     urlCapaEbook: string
 }
 
-const Headline = ({ nameEbook, descricaoEbook, urlComprarProduto, textButtonToBuy, urlCapaEbook }: HeadlineProps) => {
+const Headline = ({ nameEbook, descricaoEbook, urlComprarProduto, textButtonToBuy, urlCapaEbook, nameEbookButton }: HeadlineProps) => {
   return (
     <div className='ProdutoEspecifico__Headline'>
         <div className='ProdutoEspecifico__image'>
@@ -32,6 +33,7 @@ const Headline = ({ nameEbook, descricaoEbook, urlComprarProduto, textButtonToBu
                 variant='neon' 
                 color='Green' 
                 size='Large' 
+                id={`${nameEbookButton}-1`}
                 text={textButtonToBuy} 
               />
             </Link>

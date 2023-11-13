@@ -10,6 +10,7 @@ interface PrecoProps {
     precoMaior: string
     precoMenor: string
     textButtonToBuy: string
+    nameEbookButton: string
     urlComprarProduto: string
     shouldShowButtonBuy: boolean
     avisoEmbaixoDoPreco: string
@@ -22,6 +23,7 @@ const Preco = ({
     precoMenor, 
     urlComprarProduto, 
     textButtonToBuy, 
+    nameEbookButton,
     language, 
     shouldShowButtonBuy,
     avisoEmbaixoDoPreco,
@@ -54,6 +56,7 @@ const Preco = ({
                         variant='neon' 
                         color='Green' 
                         size='Large' 
+                        id={nameEbookButton}
                         text={textButtonToBuy} 
                     />
                 </Link>

@@ -1,5 +1,7 @@
 import Ebook from "@/interfaces/Ebook";
 
+export const rotasParabens: string [] = ['parabens-quem-comprou-gravidez-radiante'];
+
 export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: 'bfe7c2ec-307a-47f7-aeaf-a752270956c3',
@@ -9,7 +11,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         idStyledByProduct: 'gravidez-radiante',
         colorNeonGarantia: 'Blue',
         nome: 'Descubriendo la conexión de amor que tu bebé te pide y que tú no escuchas.',
-        nomeEbook: 'Gestación con amor y cuidado',
+        nomeEbook: 'gravidez-radiante-ES',
         descricao: [
             'Establecer un vínculo afectivo con tu bebé es una de las partes esenciales para tener un embarazo radiante. Piensa en esto: si no escuchas a tu bebé, ¿cómo sabrás lo que necesita? ¿Si está bien o mal en tu vientre? De hecho, ¿es posible saberlo?',
             '¿Sabías que los bebés sienten? Quieren cariño y también sienten tu amor, tus tristezas y alegrías. Pues bien, ¿cómo hacer que sienta solo cosas buenas y nazca ya feliz por tenerte como madre? ¿Es esto posible también?',
@@ -100,7 +102,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         idStyledByProduct: 'gravidez-radiante',
         colorNeonGarantia: 'Blue',
         nome: 'La nutrición perfecta para la vida de tu bebé existe y solo tú puedes brindársela!',
-        nomeEbook: 'Manual de Lactancia Perfecta',
+        nomeEbook: 'amamentacao-consciente-ES',
         descricao: [
             'Ser madre va mucho más allá de dar vida a un niño; existen cosas importantes que deben hacerse por el bebé y nada es más importante que alimentarlo.',
             'La alimentación del bebé es tan crucial como la gasolina para un automóvil, sin ella, el automóvil ni siquiera se mueve. Sin su alimento, el bebé no recibe los nutrientes necesarios para desarrollar un cuerpo sano y huesos fuertes, como es el sueño de toda madre.',
@@ -197,7 +199,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         idStyledByProduct: 'gravidez-radiante',
         colorNeonGarantia: 'Blue',
         nome: 'Desvendando a conexão de amor que seu bebê te pede e você não ouve!',
-        nomeEbook: 'Gestação com amor e cuidado',
+        nomeEbook: 'gravidez-radiante-PT',
         descricao: [
             'Criar um vínculo afetivo com o seu bebê é uma das partes essenciais para ter uma Gravidez Radiante, pense comigo: Se você não escuta seu bebê, como você vai saber do que ele precisa? Se está mal ou bem aí dentro do seu ventre? Aliás, será que é possível saber disso?',
             'Você sabia que os bebês sentem? Querem carinho e sentem também seu amor, suas tristezas e felicidades. Pois é, e como fazer para ele sentir somente coisas boas e nascer já feliz por te ter como mãe? Será que isso também é possível?',
@@ -289,7 +291,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         idStyledByProduct: 'gravidez-radiante',
         colorNeonGarantia: 'Blue',
         nome: 'Devendando a melhor maneira de vestir seu bebê com o conforto que ele merece!',
-        nomeEbook: 'Guia de Moda para bebês',
+        nomeEbook: 'guia-de-modas-PT',
         descricao: [
             'Todos bebês tem sensibilidades muito acima dos adultos, sentem mais frio, calor a pele é extremamente mais sensível e precisa de cuidados extras.',
             'Sabemos que a estação do ano na qual seu bebê nasce muda tudo nas roupas e quantidade que precisará comprar para ele. E se você pudesse saber exatamente qual roupa comprar e quantidade para vestir seu bebê na estação e região que ele nascer, e alem disso, saber cuidar da pele sensivel dele?',
@@ -381,7 +383,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         idStyledByProduct: 'gravidez-radiante',
         colorNeonGarantia: 'Blue',
         nome: 'A nutrição perfeita para a vida do seu bebê existe e só você pode dar!',
-        nomeEbook: 'Manual da Amamentação Perfeita',
+        nomeEbook: 'amamentacao-consciente-PT',
         descricao: [
             'Ser mãe vai muito além de gerar uma criança, têm coisas importantes que precisam ser feitas para o bebê e nada mais importante quanto alimentá-lo.',
             'A alimentação do bebê é tão crucial quanto a gasolina para um carro; sem ela, o carro nem sequer se move. Sem o seu alimento, o bebê não recebe os nutrientes necessários para desenvolver um corpo saudável e ossos fortes, como é o sonho de toda mãe.',
@@ -472,7 +474,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         idStyledByProduct: 'gravidez-radiante',
         colorNeonGarantia: 'Blue',
         nome: 'Somente quem escolheu ter uma Gravidez Radiante tem a oportunidade de vestir bem seu bebê com o maior conforto do mundo.',
-        nomeEbook: 'Bonus guia de modas para quem comprou o Gravidez Radiante',
+        nomeEbook: 'parabens-quem-comprou-gravidez-radiante',
         descricao: [
             'No início da gravidez imaginamos: “vou comprar um pouco de tudo e vai dar tudo certo. ” Mas quando está perto de nascer vemos que gastamos muito tempo e MUITO MAIS DINHEIRO para conseguir vestir seu bebê como ele merece.',
             'Você já imaginou poder investir MUITO MENOS para comprar as roupinhas do seu bebê, saber vesti-lo com conforto independente se ele nasça no frio, calor, norte ou sul do país? Parece sonho não é mesmo, mas está a 1 passo da sua realidade. E outro detalhe que ninguém te fala: é sobre cuidados da pele do seu bebê. Ela é sensível como seda e requer cuidados especiais sim. E você agora pode aprender a cuidar dela.',

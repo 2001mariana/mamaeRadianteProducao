@@ -7,13 +7,14 @@ import MyImage from '../MyImageCardCuidado'
 interface AprendizadosProps {
     language: 'PT' | 'ES' | 'ENG' | ''
     aprendizados: string[]
+    nameEbookButton: string
     textButtonToBuy: string
     urlComprarProduto: string
     urlCardAposBeneficios: string
     tituloBeneficios?: string[]
 }
 
-const Aprendizados = ({ language, aprendizados, urlComprarProduto, textButtonToBuy, tituloBeneficios, urlCardAposBeneficios }: AprendizadosProps) => {
+const Aprendizados = ({ language, aprendizados, nameEbookButton, urlComprarProduto, textButtonToBuy, tituloBeneficios, urlCardAposBeneficios }: AprendizadosProps) => {
   const urlCardAposBeneficiosMobile = `${urlCardAposBeneficios}-mobile`
 
   return (
@@ -48,6 +49,7 @@ const Aprendizados = ({ language, aprendizados, urlComprarProduto, textButtonToB
                 variant='neon' 
                 color='Green' 
                 size='Large' 
+                id={`${nameEbookButton}-2`}
                 text={textButtonToBuy} 
               />
             </Link>

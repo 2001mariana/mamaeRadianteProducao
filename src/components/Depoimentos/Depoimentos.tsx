@@ -10,11 +10,12 @@ interface DepoimentosProps {
     language: 'PT' | 'ES' | 'ENG'
     urlImagesDepoimentos: string[]
     textButtonToBuy: string
+    nameEbookButton: string
     urlComprarProduto: string
     tituloDepoimentos?: string
 }
 
-const Depoimentos = ({ language, urlImagesDepoimentos, textButtonToBuy, tituloDepoimentos, urlComprarProduto }: DepoimentosProps) => {
+const Depoimentos = ({ language, urlImagesDepoimentos, textButtonToBuy, nameEbookButton, tituloDepoimentos, urlComprarProduto }: DepoimentosProps) => {
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
@@ -77,6 +78,7 @@ const Depoimentos = ({ language, urlImagesDepoimentos, textButtonToBuy, tituloDe
             variant='neon' 
             color='Green' 
             size='Large' 
+            id={`${nameEbookButton}-3`}
             text={textButtonToBuy} 
           />
         </Link>
