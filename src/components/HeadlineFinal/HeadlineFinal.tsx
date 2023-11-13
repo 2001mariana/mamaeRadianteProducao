@@ -51,7 +51,7 @@ const HeadlineFinal = ({
   }: HeadlineFinalProps) => {
     const [windowSize, setWindowSize] = useState(window.innerWidth);
 
-    const urlPackBonus = (urlComprarPackBonus ? urlComprarPackBonus : 'teste');
+    const urlPackBonus = (urlComprarPackBonus ? urlComprarPackBonus : urlComprarProduto);
     const bonusSecondOption = (existeTerceiroBonus && urlCapaEbookSegundoBonus !== undefined);
     const textButtonPack = (textButtonToBuyPackBonus ? textButtonToBuyPackBonus : textButtonToBuy)
     const bonusComboWithPrice = (bonusSecondOption && precoMaiorAdquirindoTodos !== undefined && precoMenorAdquirindoTodos !== undefined);
