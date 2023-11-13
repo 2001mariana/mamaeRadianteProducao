@@ -79,8 +79,9 @@ const HeadlineFinal = ({
   }, []);
 
   useEffect(() => {
+    
     shouldShowButton(windowSize)
-  }, [windowSize])
+  }, [windowSize, shouldShowButton])
 
   return (
     <div className='HeadlineFinal HeadlineBonus'>

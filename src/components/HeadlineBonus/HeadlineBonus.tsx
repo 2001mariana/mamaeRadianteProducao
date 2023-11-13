@@ -81,6 +81,7 @@ const HeadlineBonus = ({
                   precoMaior={precoMaior}
                   precoMenor={precoMenor}
                   shouldShowButtonBuy={false}
+                  nameEbookButton=""
                   textButtonToBuy=""
                   urlComprarProduto=""
                   fraseEmbaixoDoPreco={fraseEmbaixoDoPreco}
