@@ -66,6 +66,17 @@ export default function App({ Component, pageProps }: AppProps) {
                           `,
                           }}
                         />
+                        <Script src="https://www.googletagmanager.com/gtag/js?id=G-EVY1Q6GR61" />
+                        <Script
+                          id='google-analytics'
+                          dangerouslySetInnerHTML={{
+                            __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-EVY1Q6GR61'); `,
+                          }}
+                        />
                     </div>
                 </LanguageContext.Provider>
             </div>
