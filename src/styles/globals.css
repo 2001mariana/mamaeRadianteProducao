@@ -22,14 +22,7 @@
 @import url(Page404.css);
 @import url(LupaLoading.css);
 @import url(Animacoes.css);
-
-.ProdutoEspecifico__video {
-  height: 60%;
-  width: 50%;
-  margin: 1% auto;
-}
-
-.video__button-cta { padding: 2%; }
+@import url(TelaVideo.css);
 
 @tailwind base;
 @tailwind utilities;

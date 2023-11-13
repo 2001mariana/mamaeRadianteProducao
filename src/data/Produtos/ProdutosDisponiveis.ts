@@ -298,7 +298,7 @@ export const ProdutosDisponiveis: Ebook[] = [
             'Pois é, agora é possível saber de tudo isso em um só lugar e economizar muito tempo e dinheiro com este guia completo, feito especialmente no Brasil, estudado a fundo contando com as condições climáticas e a região que o seu bebê nasce.'
         ],
         precoMaior: '209,99',
-        precoMenor: '49,99',
+        precoMenor: '89,99',
         linguagem: 'PT',
         moeda: 'R$',
         capitulos: [
@@ -342,7 +342,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         ],
         bonus: {
             precoMaior: '89,99',
-            precoMenor: '19,99',
+            precoMenor: '49,99',
             exibirPrecoBonus: false,
             titleHeadlineEbookBonus: ['MARAVILHAS QUE SÓ UMA MAMÃE QUE ESCOLHE VESTIR SEU BEBÊ COM CONFORTO PODE DESFRUTAR:'],
             textoBonusEbookPrincipal: [
@@ -364,7 +364,8 @@ export const ProdutosDisponiveis: Ebook[] = [
             ],
         },
         avisoEmbaixoDoPreco: 'Este preço é promoção de BlackFriday, podendo ser alterado a qualquer momento sem aviso prévio',
-        urlComprarProduto: 'https://pay.kiwify.com.br/Cu8SR7T',
+        urlComprarProduto: 'https://pay.kiwify.com.br/uoDVSkp',
+        urlComprarProdutoTelaBonus: 'https://pay.kiwify.com.br/Cu8SR7T',
         urlLinkWhatsapp: 'https://api.whatsapp.com/send?phone=5524993230596&text=oi%20tenho%20duvidas%20sobre%20o%20guia%20de%20modas',
         urlCardAposBeneficios: 'warning-guia-de-modas-PT',
         urlCardAposBeneficiosBonus: 'importante-amamentacao-PT',

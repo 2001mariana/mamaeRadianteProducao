@@ -27,6 +27,7 @@ export default interface Ebook {
     aprendizados: string[]
     avisoEmbaixoDoPreco: string
     urlComprarProduto: string
+    urlComprarProdutoTelaBonus?: string
     urlComprarPackBonus?: string
     colorNeonGarantia: 'Green' | 'Purple' | 'Orange' | 'Blue'
     urlImagesPrevia: string[]
