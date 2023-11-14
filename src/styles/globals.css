@@ -23,6 +23,8 @@
 @import url(LupaLoading.css);
 @import url(Animacoes.css);
 @import url(TelaVideo.css);
+@import url(Contato__link.css);
+@import url(Footer.css);
 
 @tailwind base;
 @tailwind utilities;

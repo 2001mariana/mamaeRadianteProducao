@@ -2,6 +2,7 @@ import Ebook from '@/interfaces/Ebook';
 import Link from 'next/link';
 import Button from '../Button';
 import NotFound from '../NotFound';
+import Footer from '../Footer';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
@@ -53,6 +54,8 @@ if (ebookAtual.urlVideoYoutube) {
           />
         </Link>
       </div>
+      
+      <Footer deveExibirLogo={true} />
     </div>
   )} else {
     return <NotFound />

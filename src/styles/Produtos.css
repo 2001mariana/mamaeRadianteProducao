@@ -4,9 +4,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    border: 2px solid greenyellow;
 }
 .Produtos > div.Produtos__cards {
-    height: calc(100vh - 90px);
+    /* min-height: 75%; */
+    height: auto;
+    border: 2px solid tomato;
     width: 100%;
     display: flex;
     justify-content: center; 

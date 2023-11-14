@@ -4,6 +4,7 @@ import { LanguageContext } from "@/pages/_app";
 import { ProdutosDisponiveis } from "@/data/Produtos/ProdutosDisponiveis";
 import { useContext } from "react";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer";
 
 function Produtos() {
   const { contextValue }  = useContext(LanguageContext);
@@ -23,6 +24,7 @@ function Produtos() {
             </CardEbook>
           ))}
         </div>
+        <Footer deveExibirLogo={false} />
       </div>
     </>
   );

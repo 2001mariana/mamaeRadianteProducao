@@ -19,6 +19,7 @@ import MyImage from '@/components/MyImagePrevia';
 import Headline from '@/components/Headline';
 import Preco from '@/components/Preco';
 import SuporteWhatsapp from '../SuporteWhatsapp/SuporteWhatsapp';
+import Footer from '../Footer';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
@@ -171,6 +172,8 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       <SuporteWhatsapp language={ebookAtual.linguagem} urlLinkWhatsapp={ebookAtual.urlLinkWhatsapp} />
 
       <Faq idStyledByProduct={`FAQ--${ebookAtual.idStyledByProduct}`} language={ebookAtual.linguagem} />
+
+      <Footer deveExibirLogo={true} />
     </div>
   )
 }
