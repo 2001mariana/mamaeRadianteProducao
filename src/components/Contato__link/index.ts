@@ -1,0 +1,1 @@
+export {default} from './Contato__link';

@@ -1,0 +1,31 @@
+.Contato__link {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: border 0.5s, background-color 0.75s,  opacity 0.25s;
+}
+
+.Contato__link.Whatsapp { background-color: #2fed21; }
+.Contato__link.Whatsapp:hover { background-color: #27cf1b80; border: 1px solid #2fed21; }
+
+.Contato__link.Instagram {
+  background-image: linear-gradient(to left top, #da9920, #fa7632 ,#ff465a, #ff0090, #eb12cf, #aa12eb );
+}
+
+.Contato__link.Instagram:hover {
+  background-image: linear-gradient(to left top, #da9920, #fa7632 ,#ff465a, #ff0090, #eb12cf, #aa12eb );
+  opacity: 0.9;
+  border: 1px solid #FFF;
+} 
+
+.Contato__link.Facebook { background-color: #1853a1; }
+.Contato__link.Facebook:hover { background-color: #1853a180; border: 1px solid #1853a1; }
+.Contato__link.Contato__exibirNomeRedeSocial--true svg { margin-right: 6px; }
+.Contato__link.Contato__exibirNomeRedeSocial--false svg { margin-right: 0px; }
+@media screen and (max-width: 750px) { .Contato__link > span { display: none; } .Contato__link svg { margin-right: 0; }}
