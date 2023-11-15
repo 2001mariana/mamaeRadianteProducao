@@ -14,7 +14,6 @@ export default function App({ Component, pageProps }: AppProps) {
     const router = useRouter()
 
   useEffect(() => {
-    // This pageview only triggers the first time (it's important for Pixel to have real information)
     fbq.pageview()
 
     const handleRouteChange = () => {
@@ -43,7 +42,8 @@ export default function App({ Component, pageProps }: AppProps) {
                 <Head>
                     <title>Mamãe Radiante</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-                    <meta name="facebook-domain-verification" content="lugupjkdi297w32zr8z18fbydhzxl6" />                
+                    {/* <meta name="facebook-domain-verification" content="lugupjkdi297w32zr8z18fbydhzxl6" />                 */}
+                    <meta name="facebook-domain-verification" content="r7v3nethi08xl2x6uqps82ilyj0bkz" />
                 </Head>
                 <LanguageContext.Provider value={{updateContext: updateSelectedLanguage, contextValue: defaultBrowserLanguage}}>
                     <div className='App--content'>
@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }: AppProps) {
                           t.src=v;s=b.getElementsByTagName(e)[0];
                           s.parentNode.insertBefore(t,s)}(window, document,'script',
                           'https://connect.facebook.net/en_US/fbevents.js');
-                          fbq('init', '722506406412193');
+                          fbq('init', '1277739633622360');
                           fbq('track', 'PageView');                    
                           `,
                           }}
