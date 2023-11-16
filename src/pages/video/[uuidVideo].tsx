@@ -6,7 +6,6 @@ import LupaLoading from '@/components/LupaLoading';
 import { ProdutosDisponiveis } from '@/data/Produtos/ProdutosDisponiveis';
 import TelaVideo from '@/components/TelaVideo';
 import { useRouter } from 'next/router';
-import TelaProduto from '@/components/TelaProduto';
 
 export async function getStaticPaths() {
   const paths = ProdutosDisponiveis.map((post) => ({
@@ -31,7 +30,6 @@ function Index(props: {
   
   const [exibirLoading, setExibirLoading] = useState<boolean>(true);
   const [ebookAtual, setEbookAtual] = useState<Ebook|undefined>(undefined);
-  const router = useRouter();
 
   const ebookCarregado = (ebook: Ebook) => {
     setEbookAtual(ebook)
