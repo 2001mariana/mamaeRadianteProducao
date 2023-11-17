@@ -1,6 +1,7 @@
 export default interface Ebook {
     uuid: string
     uuidVideo: string
+    headlineVideo?: string
     urlVideoYoutube?: string
     isFunil: boolean
     idStyledByProduct: string

@@ -7,11 +7,12 @@ import Footer from '../Footer';
 interface TelaProdutoProps { ebookAtual: Ebook }
 
 function TelaProduto({ebookAtual}: TelaProdutoProps) {
+  const headlineVideo = (ebookAtual.headlineVideo ? ebookAtual.headlineVideo : ebookAtual.nome);
 
 if (ebookAtual.urlVideoYoutube) {
   return (
     <div className='ProdutoEspecifico TelaVideo' id={`headline--${ebookAtual.idStyledByProduct}`}>
-    <div className='ProdutoEspecifico__tittle'>{ebookAtual.nome}</div>
+    <div className='ProdutoEspecifico__tittle'>{headlineVideo}</div>
     <div className='ProdutoEspecifico__video'>
       <div className='ProdutoEspecifico__video--messias'>
         <iframe loading="lazy" 
