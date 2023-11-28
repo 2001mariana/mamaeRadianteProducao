@@ -20,6 +20,7 @@ import Headline from '@/components/Headline';
 import Preco from '@/components/Preco';
 import SuporteWhatsapp from '../SuporteWhatsapp/SuporteWhatsapp';
 import Footer from '../Footer';
+import Introducao from '../Introducao';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
@@ -45,6 +46,10 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         subtitle={ebookAtual.bonus.subtitleHeadlineParabens}
         shouldShowConfetti={ebookAtual.isFunil} 
       />
+
+      {
+        ebookAtual.urlImageIntroducao ? <Introducao urlImageIntroducao={ebookAtual.urlImageIntroducao} /> : null
+      }
 
       <Headline 
         descricaoEbook={ebookAtual.descricao} 

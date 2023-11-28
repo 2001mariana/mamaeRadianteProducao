@@ -33,6 +33,7 @@ export default interface Ebook {
     colorNeonGarantia: 'Green' | 'Purple' | 'Orange' | 'Blue'
     urlImagesPrevia: string[]
     urlImagesDepoimentos: string[]
+    urlImageIntroducao?: string;
     urlImageCapa: string
     urlImageCapaSecudaria: string
     urlImageCapaBonus: string 
@@ -41,6 +42,7 @@ export default interface Ebook {
     urlCardAposBeneficiosBonus: string
     urlLinkWhatsapp: string
     existeTerceiroBonus: boolean
+    existeIntroducao?: boolean
     bonus: {
         precoMaior: string
         precoMenor: string

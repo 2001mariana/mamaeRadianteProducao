@@ -197,6 +197,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         urlVideoYoutube: 'https://www.youtube.com/embed/q0hyYWKXF0Q?si=6LSAflDAg8gHozk-',
         isFunil: false,
         existeTerceiroBonus: false,
+        existeIntroducao: true,
         idStyledByProduct: 'gravidez-radiante',
         colorNeonGarantia: 'Blue',
         nome: 'Desvendando a conexão de amor que seu bebê te pede e você não ouve!',
@@ -281,6 +282,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         urlImageCapaSecudaria: 'gravidez-radiante-pt-2',
         urlImageCapaBonus: 'guia-de-modas-bb',
         urlImageCapaBonusSecudaria: 'guia-de-modas-bb-2',
+        urlImageIntroducao: 'introducao-gravidez-radiante-pt',
         urlImagesPrevia: ['ptGravidezRadianteIntroducao1.png', 'ptGravidezRadianteIntroducao2.png', 'ptGravidezRadianteSumario1.png', 'ptGravidezRadianteSumario2.png'],
         urlImagesDepoimentos: ['registro1.jpg', 'registro1-2.jpg', 'registro5.jpg', 'registro3.jpg', 'registro4.jpg', 'registro2.jpg']
     }, 
