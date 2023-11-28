@@ -3,12 +3,14 @@ import MyImageIntroducao from "../MyImageIntroducao";
 
 interface IntroducaoProps {
     urlImageIntroducao: string
+    urlImageAtencao: string
 }
 
-const Introducao = ({ urlImageIntroducao }: IntroducaoProps) => {
+const Introducao = ({ urlImageIntroducao, urlImageAtencao }: IntroducaoProps) => {
     
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [nameImage, setNameImage] = useState(urlImageIntroducao)
+  const [nameImage, setNameImage] = useState(urlImageIntroducao);
+  const [nameImageAtencao, setNameImageAtencao] = useState(urlImageAtencao);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -22,19 +24,36 @@ const Introducao = ({ urlImageIntroducao }: IntroducaoProps) => {
     };
   }, []);
 
+
   useEffect(() => {
+    const updateNameForMobile = () => {
+      setNameImage(`${urlImageIntroducao}-mobile`)
+      setNameImageAtencao(`${urlImageAtencao}-mobile`)
+    }
+    
+    const updateImageForOriginalSize = () => {
+      setNameImage(urlImageIntroducao)
+      setNameImageAtencao(urlImageAtencao)
+    }
+  
     function shouldReturnNameImage(widthSize: number) {
          if (widthSize < 600 ) {
-          return setNameImage(`${urlImageIntroducao}-mobile`)
-        }{
-          return setNameImage(urlImageIntroducao)
+          return updateNameForMobile()
+        } else
+        {
+          return updateImageForOriginalSize()
         }
-      }
+    }
 
       shouldReturnNameImage(windowSize)
-  }, [windowSize, nameImage, urlImageIntroducao])
+  }, [urlImageAtencao, urlImageIntroducao, windowSize])
 
-    return <MyImageIntroducao nameImage={nameImage} />
+    return (
+      <div className="Introducao">
+        <MyImageIntroducao nameImage={nameImage} />
+        <MyImageIntroducao nameImage={nameImageAtencao} />
+      </div>
+    )
 }
 
 export default Introducao

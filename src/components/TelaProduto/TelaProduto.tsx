@@ -21,11 +21,13 @@ import Preco from '@/components/Preco';
 import SuporteWhatsapp from '../SuporteWhatsapp/SuporteWhatsapp';
 import Footer from '../Footer';
 import Introducao from '../Introducao';
+import TelaVideo from '../TelaVideo';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
 function TelaProduto({ebookAtual}: TelaProdutoProps) {
   const deveExibirPreco = (ebookAtual.bonus.exibirPrecoAposBeneficios && ebookAtual.bonus.exibirPrecoBonus);
+  const exibirIntroducao = (ebookAtual.urlImageIntroducao && ebookAtual.urlImageIntroducaoAtencao);
   const uuidRotaParabens = '2742f4da-4f27-45d6-b3bc-bca71385ed57';
 
   const purchaseEventParabens = () => {
@@ -48,7 +50,20 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       />
 
       {
-        ebookAtual.urlImageIntroducao ? <Introducao urlImageIntroducao={ebookAtual.urlImageIntroducao} /> : null
+        exibirIntroducao ? 
+          <Introducao 
+            urlImageIntroducao={ebookAtual.urlImageIntroducao!} 
+            urlImageAtencao={ebookAtual.urlImageIntroducaoAtencao!}
+          /> 
+          : null
+      }
+
+      { ebookAtual.existeVideo ? 
+          <TelaVideo
+            urlComprarProduto={ebookAtual.urlComprarProduto} 
+            textButtonCTA={ebookAtual.textButtonToBuy}
+          /> 
+        : null
       }
 
       <Headline 

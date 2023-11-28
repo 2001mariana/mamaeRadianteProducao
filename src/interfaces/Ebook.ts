@@ -34,6 +34,7 @@ export default interface Ebook {
     urlImagesPrevia: string[]
     urlImagesDepoimentos: string[]
     urlImageIntroducao?: string;
+    urlImageIntroducaoAtencao?: string;
     urlImageCapa: string
     urlImageCapaSecudaria: string
     urlImageCapaBonus: string 
@@ -42,7 +43,7 @@ export default interface Ebook {
     urlCardAposBeneficiosBonus: string
     urlLinkWhatsapp: string
     existeTerceiroBonus: boolean
-    existeIntroducao?: boolean
+    existeVideo: boolean
     bonus: {
         precoMaior: string
         precoMenor: string

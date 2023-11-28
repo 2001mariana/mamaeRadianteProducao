@@ -29,6 +29,22 @@
 @tailwind base;
 @tailwind utilities;
 
+.Introducao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Introducao img:first-child {
+  width: 100%;
+}
+/* 
+.Introducao img{
+  border: 1px solid blue;
+  width: 100%;
+} */
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
