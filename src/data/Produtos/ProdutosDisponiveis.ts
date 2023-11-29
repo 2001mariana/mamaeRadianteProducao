@@ -295,7 +295,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         existeVideo: false,
         idStyledByProduct: 'gravidez-radiante',
         colorNeonGarantia: 'Blue',
-        nome: 'A Gravidez Radiante te proporciona dar algo para seu bebê nunca visto antes',
+        nome: 'Devendando a melhor maneira de vestir seu bebê com o conforto que ele merece!',
         nomeEbook: 'guia-de-modas-PT',
         descricao: [
             'Todos bebês tem sensibilidades muito acima dos adultos, sentem mais frio, calor a pele é extremamente mais sensível e precisa de cuidados extras.',
