@@ -4,7 +4,8 @@ import telegram from '../../assets/icons/telegram.svg'
 import whatsapp from '../../assets/icons/whatsapp.svg'
 import infinity from '../../assets/icons/infinity.svg'
 import cadeadoAberto from '../../assets/icons/novo-cadeado.svg'
-import vip from '../../assets/icons/grupo-vip.svg'
+import vip from '../../assets/icons/grupo-vip.png'
+import desconto from '../../assets/icons/desconto.svg'
 
 import { Suspense } from 'react'
 import SearchAnimaton from '../SearchAnimaton'
@@ -18,9 +19,11 @@ export function getImageByName(name: string) {
     return vip
   } else if ('icons/infinity.svg'.includes(name)) {
     return infinity
-  } if ('icons/cadeado-aberto.svg'.includes(name)) {
+  } else if ('icons/cadeado-aberto.svg'.includes(name)) {
     return cadeadoAberto
-  }else {
+  } else if ('icons/desconto'.includes(name)) {
+    return desconto
+  } else {
     return infinity
   }
 }

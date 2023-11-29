@@ -55,9 +55,9 @@ export const ProdutosDisponiveis: Ebook[] = [
             ],
         urlComprarProduto: 'https://chk.eduzz.com/2072312',
         itensHeadlineFinal: [
+            {item: 'Grupo VIP con otras mamás en Whatsapp', icon: 'vip'},
             {item: 'Asistencia vía Whatsapp', icon: 'whatsapp'},
             {item: 'Acceso de por vida', icon: 'infinity'},
-            {item: 'Grupo VIP con otras mamás en Whatsapp', icon: 'vip'},
             {item: 'Desbloqueo de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
         ],
         bonus: {
@@ -146,9 +146,9 @@ export const ProdutosDisponiveis: Ebook[] = [
             ],
         urlComprarProduto: 'aindaNãoTem',
         itensHeadlineFinal: [
+            {item: 'Grupo VIP con otras mamás en Whatsapp', icon: 'vip'},
             {item: 'Asistencia vía Whatsapp', icon: 'whatsapp'},
             {item: 'Acceso de por vida', icon: 'infinity'},
-            {item: 'Grupo VIP con otras mamás en Whatsapp', icon: 'vip'},
             {item: 'Desbloqueo de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
         ],
         bonus: {
@@ -244,9 +244,10 @@ export const ProdutosDisponiveis: Ebook[] = [
             'Conhecimento de diferentes opções de parto, desde parto natural até cesariana, e como se preparar para o grande dia.'
         ],
         itensHeadlineFinal: [
+            {item: 'Liberação de cupons de descontos EXCLUSIVOS', icon: 'desconto'},
+            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Suporte via Whatsapp', icon: 'whatsapp'},
             {item: 'Acesso vitalício', icon: 'infinity'},
-            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Desbloqueio de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
         ],
         bonus: {
@@ -340,9 +341,10 @@ export const ProdutosDisponiveis: Ebook[] = [
             'Habilidades de saber onde comprar roupas e acessórios bons e baratos para bebês.'
         ],
         itensHeadlineFinal: [
+            {item: 'Liberação de cupons de descontos EXCLUSIVOS', icon: 'desconto'},
+            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Suporte via Whatsapp', icon: 'whatsapp'},
             {item: 'Acesso vitalício', icon: 'infinity'},
-            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Desbloqueio de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
         ],
         bonus: {
@@ -432,9 +434,10 @@ export const ProdutosDisponiveis: Ebook[] = [
             'Contato direto com pessoas capacitadas para tirar a suas dúvidas. '
         ],
         itensHeadlineFinal: [
+            {item: 'Liberação de cupons de descontos EXCLUSIVOS', icon: 'desconto'},
+            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Suporte via Whatsapp', icon: 'whatsapp'},
             {item: 'Acesso vitalício', icon: 'infinity'},
-            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Desbloqueio de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
         ],
         bonus: {
@@ -530,9 +533,10 @@ export const ProdutosDisponiveis: Ebook[] = [
             'Habilidades de saber onde comprar roupas e acessórios bons e baratos para bebês.'
         ],
         itensHeadlineFinal: [
+            {item: 'Liberação de cupons de descontos EXCLUSIVOS', icon: 'desconto'},
+            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Suporte via Whatsapp', icon: 'whatsapp'},
             {item: 'Acesso vitalício', icon: 'infinity'},
-            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Desbloqueio de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
         ],
         bonus: {
@@ -636,9 +640,10 @@ export const ProdutosDisponiveis: Ebook[] = [
             'Habilidades de saber onde comprar roupas e acessórios bons e baratos para bebês.'
         ],
         itensHeadlineFinal: [
+            {item: 'Liberação de cupons de descontos EXCLUSIVOS', icon: 'desconto'},
+            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Suporte via Whatsapp', icon: 'whatsapp'},
             {item: 'Acesso vitalício', icon: 'infinity'},
-            {item: 'Grupo Vip com outras mamães no Whatsapp', icon: 'vip'},
             {item: 'Desbloqueio de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
         ],
         bonus: {
