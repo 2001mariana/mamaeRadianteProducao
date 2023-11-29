@@ -22,6 +22,7 @@ import SuporteWhatsapp from '../SuporteWhatsapp/SuporteWhatsapp';
 import Footer from '../Footer';
 import Introducao from '../Introducao';
 import TelaVideo from '../TelaVideo';
+import CardBeneficios from '../CardBeneficios';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
@@ -59,10 +60,17 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       }
 
       { ebookAtual.existeVideo ? 
+        <>
           <TelaVideo
             urlComprarProduto={ebookAtual.urlComprarProduto} 
             textButtonCTA={ebookAtual.textButtonToBuy}
           /> 
+          <CardBeneficios 
+            itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
+            language={ebookAtual.linguagem} 
+            titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
+          />
+        </>
         : null
       }
 
@@ -137,6 +145,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus}
         exibirPrecoBonus={ebookAtual.bonus.exibirPrecoBonus}
         avisoEmbaixoDoPreco={ebookAtual.avisoEmbaixoDoPreco}
+        existeVideo={ebookAtual.existeVideo}
       />
 
       <BeneficiosBonus 
