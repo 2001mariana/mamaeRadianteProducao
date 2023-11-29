@@ -36,13 +36,13 @@
   align-items: center;
 }
 
-.Introducao img:first-child {
-  width: 100%;
-}
-
 .CardBeneficios__button {
   padding: 1rem;
   height: 130px;
+}
+
+.Introducao img:first-child {
+  width: 100%;
 }
 
 :root {
