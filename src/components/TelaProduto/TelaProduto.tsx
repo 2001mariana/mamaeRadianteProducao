@@ -69,6 +69,9 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
             itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
             language={ebookAtual.linguagem} 
             titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
+            exibirBotaoCTA={ebookAtual.existeVideo}
+            textButtonToBuy={ebookAtual.textButtonToBuy}
+            urlComprarProduto={ebookAtual.urlComprarProduto}
           />
         </>
         : null
@@ -146,6 +149,8 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         exibirPrecoBonus={ebookAtual.bonus.exibirPrecoBonus}
         avisoEmbaixoDoPreco={ebookAtual.avisoEmbaixoDoPreco}
         existeVideo={ebookAtual.existeVideo}
+        textButtonToBuy={ebookAtual.textButtonToBuy}
+        urlComprarProduto={ebookAtual.urlComprarProduto}
       />
 
       <BeneficiosBonus 

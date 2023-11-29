@@ -39,11 +39,11 @@
 .Introducao img:first-child {
   width: 100%;
 }
-/* 
-.Introducao img{
-  border: 1px solid blue;
-  width: 100%;
-} */
+
+.CardBeneficios__button {
+  height: 130px;
+  padding: 1rem;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;

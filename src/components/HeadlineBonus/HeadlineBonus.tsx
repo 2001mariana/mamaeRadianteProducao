@@ -17,6 +17,8 @@ interface HeadlineBonusProps {
     fraseEmbaixoDoPreco?: string
     exibirPrecoBonus: boolean    
     existeVideo: boolean
+    urlComprarProduto: string
+    textButtonToBuy: string
 }
 
 const HeadlineBonus = ({ 
@@ -33,7 +35,9 @@ const HeadlineBonus = ({
   exibirPrecoAposBeneficios,
   fraseEmbaixoDoPreco,
   exibirPrecoBonus,
-  existeVideo
+  existeVideo, 
+  urlComprarProduto,
+  textButtonToBuy
 }: HeadlineBonusProps) => {
 
   const deveExibirPreco = (!exibirPrecoAposBeneficios && exibirPrecoBonus);
@@ -46,6 +50,9 @@ const HeadlineBonus = ({
               itensHeadlineFinal={itensHeadlineFinal} 
               language={language} 
               titleHeadlineEbookBonus={titleHeadlineEbookBonus} 
+              exibirBotaoCTA={existeVideo}
+              textButtonToBuy={textButtonToBuy}
+              urlComprarProduto={urlComprarProduto}
             />
         }
 
