@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react';
 import NotFound from '@/components/NotFound';
 import LupaLoading from '@/components/LupaLoading';
 import { ProdutosDisponiveis } from '@/data/Produtos/ProdutosDisponiveis';
-import TelaVideo from '@/components/TelaVideo';
-import { useRouter } from 'next/router';
 import TelaProduto from '@/components/TelaProduto';
 
 export async function getStaticPaths() {
