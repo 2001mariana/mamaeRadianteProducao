@@ -3,7 +3,7 @@ import MyImageIntroducao from "../MyImageIntroducao";
 
 interface IntroducaoProps {
     urlImageIntroducao: string
-    urlImageAtencao: string
+    urlImageAtencao?: string
 }
 
 const Introducao = ({ urlImageIntroducao, urlImageAtencao }: IntroducaoProps) => {
@@ -51,7 +51,11 @@ const Introducao = ({ urlImageIntroducao, urlImageAtencao }: IntroducaoProps) =>
     return (
       <div className="Introducao">
         <MyImageIntroducao nameImage={nameImage} />
-        <MyImageIntroducao nameImage={nameImageAtencao} />
+
+        {
+          urlImageAtencao ? <MyImageIntroducao nameImage={nameImageAtencao!} /> : null
+        }
+        
       </div>
     )
 }

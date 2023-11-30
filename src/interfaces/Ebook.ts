@@ -2,7 +2,8 @@ export default interface Ebook {
     uuid: string
     uuidVideo: string
     headlineVideo?: string
-    urlVideoYoutube?: string
+    // urlVideoYoutube?: string
+    exibirIntroducao: boolean
     isFunil: boolean
     idStyledByProduct: string
     nome: string
