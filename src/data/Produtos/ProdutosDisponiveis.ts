@@ -56,7 +56,6 @@ export const ProdutosDisponiveis: Ebook[] = [
             ],
         urlComprarProduto: 'https://chk.eduzz.com/2072312',
         itensHeadlineFinal: [
-            {item: 'Grupo VIP con otras mamás en Whatsapp', icon: 'vip'},
             {item: 'Asistencia vía Whatsapp', icon: 'whatsapp'},
             {item: 'Acceso de por vida', icon: 'infinity'},
             {item: 'Desbloqueo de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
@@ -149,7 +148,6 @@ export const ProdutosDisponiveis: Ebook[] = [
             ],
         urlComprarProduto: 'aindaNãoTem',
         itensHeadlineFinal: [
-            {item: 'Grupo VIP con otras mamás en Whatsapp', icon: 'vip'},
             {item: 'Asistencia vía Whatsapp', icon: 'whatsapp'},
             {item: 'Acceso de por vida', icon: 'infinity'},
             {item: 'Desbloqueo de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
