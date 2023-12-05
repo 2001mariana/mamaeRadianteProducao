@@ -22,7 +22,7 @@ function Garantia({ color, language }: GarantiaProps) {
     }
     function getDaysByLanguage(language: 'PT' | 'ES' | 'ENG' ): string {
         if (language === 'ES') {
-            return '14'
+            return '15'
         } else if (language === 'PT') {
             return '7'
         } else {
