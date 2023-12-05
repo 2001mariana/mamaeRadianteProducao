@@ -55,7 +55,7 @@ export const ProdutosDisponiveis: Ebook[] = [
             'Habilidades fenomenales para tener la mejor nutrición en un embarazo radiante.',
             'Conocimiento de diferentes opciones de parto, desde el parto natural hasta la cesárea, y cómo prepararte para el gran día.'
             ],
-        urlComprarProduto: 'https://chk.eduzz.com/2072312',
+        urlComprarProduto: 'https://sun.eduzz.com/un6k2apm',
         itensHeadlineFinal: [
             {item: 'Asistencia vía Whatsapp', icon: 'whatsapp'},
             {item: 'Acceso de por vida', icon: 'infinity'},
@@ -148,7 +148,7 @@ export const ProdutosDisponiveis: Ebook[] = [
             'Técnicas avanzadas de lactancia en el trabajo.',
             'Acceso directo a personas capacitadas para responder sus preguntas.'
             ],
-        urlComprarProduto: 'aindaNãoTem',
+        urlComprarProduto: 'https://sun.eduzz.com/2191353',
         itensHeadlineFinal: [
             {item: 'Asistencia vía Whatsapp', icon: 'whatsapp'},
             {item: 'Acceso de por vida', icon: 'infinity'},
@@ -246,7 +246,7 @@ export const ProdutosDisponiveis: Ebook[] = [
             'Técnicas avanzadas de lactancia en el trabajo.',
             'Acceso directo a personas capacitadas para responder sus preguntas.'
             ],
-        urlComprarProduto: 'aindaNãoTem',
+        urlComprarProduto: 'https://sun.eduzz.com/smiguaet',
         itensHeadlineFinal: [
             {item: 'Asistencia vía Whatsapp', icon: 'whatsapp'},
             {item: 'Acceso de por vida', icon: 'infinity'},
@@ -294,6 +294,101 @@ export const ProdutosDisponiveis: Ebook[] = [
         urlImagesPrevia: ['amamentacaoESIntroducao', 'amamentacaoESSumario1', 'amamentacaoESSumario2'],
         urlImagesDepoimentos: ['es-amamantacao-1', 'es-amamantacao-1-2', 'es-amamantacao-3', 'es-amamantacao-2', 'es-amamantacao-4']
     },
+    {
+        uuid: '289477ec-307a-47f7-aeaf-a752270956c3',
+        uuidVideo: '289477ec-307a-47f7-aeaf-a752270956c3',
+        existeEbookBonus: false,
+        isFunil: true,
+        existeTerceiroBonus: false,
+        existeVideo: false,
+        exibirIntroducao: true,
+        idStyledByProduct: 'gravidez-radiante',
+        colorNeonGarantia: 'Blue',
+        nome: 'El embarazo radiante te brinda la oportunidad de darle algo a tu bebé que nunca ha sido visto antes',
+        nomeEbook: 'gravidez-radiante-ES',
+        descricao: [
+            '¿Sabes ese calorcito en el pecho que sientes al recibir un abrazo de alguien querido, o cuando reencuentras a alguien después de mucho tiempo y finalmente puedes abrazar a esa persona? Está muy cerca.',
+            'Porque eso es exactamente lo que el Embarazo Radiante viene a enseñarte a hacer con tu bebé, abrazarlo y estar cerca de él. Y esto debe hacerse mientras está en tu vientre, para que sepa desde el momento en que aparece que tiene una madre.'
+        ],
+        tituloBeneficios: ['Tener un Embarazo Radiante es un camino de ida', 'que te permite:'],
+        tituloDepoimentos: 'Mira cómo el Embarazo Radiante ha cambiado la vida de las embarazadas',
+        tituloBonus: 'La Futura Mamá Radiante tiene el poder de desbloquear ofertas exclusivas que solo ella tiene',
+        tituloHeadlineFinal: ['La oportunidad ha tocado a tu puerta!', 'Ahora, FINALMENTE, puedes ser dueña de un Embarazo Radiante'],
+        precoMaior: '89,99',
+        precoMenor: '8,99',
+        linguagem: 'ES',
+        moeda: '€',
+        capitulos: [
+            'Descubriendo la Magia del Embarazo',
+            'Nutriendo el Cuerpo y el Alma',
+            'Cuidados Prenatales Esenciales',
+            'Fortaleciendo la Conexión entre Madre y Bebé',
+            'Preparándose para el Parto y Más Allá',
+            'Encontrando Apoyo en la Comunidad',
+            'Celebrando la Maternidad',
+            'Conclusión: Tu Radiante Viaje Continúa'
+        ],
+        tag: 'gravidez',
+        textButtonToBuy: 'Quiero tener un embarazo radiante',
+        textButtonToDepoimentos: 'Quiero tener un embarazo radiante',
+        aprendizados: [
+            'Un VÍNCULO FUERTE con tu bebé incluso en tu vientre, convirtiéndote en una mamá amiga para él.',
+            'Compañía, ya que tu guía es tu amigo que te guía hacia un embarazo tranquilo, saludable y radiante.',
+            'Habilidades únicas y especializadas para enfrentar cualquier situación en el embarazo y convertirte en una Súper Mamá poderosa.',
+            'Estrategias especializadas para manejar el estrés y la ansiedad durante el embarazo, promoviendo un estado de tranquilidad.',
+            'Habilidades esenciales para el cuidado prenatal.',
+            'Técnicas avanzadas sobre cómo comunicarte con tu bebé y entenderlo incluso cuando todavía está en el vientre.',
+            'Rutinas saludables para ti y tu bebé, creando un entorno seguro y acogedor para ambos.',
+            'Una conexión amorosa y única con tu tesoro y ser amiga, incluso antes de que nazca, para que esté feliz de tenerte como mamá.',
+            'Crear un tesoro de recuerdos para compartir con tu hijo/a en el futuro.',
+            'Conexiones únicas con tus emociones, para reflexionar y escribir sobre ti y contar tus memorias durante el embarazo.',
+            'Las mejores tácticas para desvelar los mayores secretos sobre la organización que toda madre radiante necesita.',
+            'Habilidades fenomenales para tener la mejor nutrición en un embarazo radiante.',
+            'Conocimiento de diferentes opciones de parto, desde el parto natural hasta la cesárea, y cómo prepararte para el gran día.'
+            ],
+        urlComprarProduto: 'https://sun.eduzz.com/i3zfkpdc',
+        itensHeadlineFinal: [
+            {item: 'Asistencia vía Whatsapp', icon: 'whatsapp'},
+            {item: 'Acceso de por vida', icon: 'infinity'},
+            {item: 'Desbloqueo de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
+        ],
+        bonus: {
+            precoMaior: '99,99',
+            precoMenor: '8,99',
+            exibirPrecoBonus: false,
+            titleHeadlineParabens: '¡Felicidades por elegir tener una Lactancia Consciente!!',
+            subtitleHeadlineParabens: 'A partir de ahora has pasado a un próximo nivel.',
+            textoBonusEbookPrincipal: [
+                'Entendemos que la temporada en la que nace su bebé cambia todo en cuanto a la ropa y la cantidad que necesitará comprar para él. ¿Y si pudiera saber exactamente qué ropa comprar y cuánta para vestir a su bebé en la temporada y la región en la que nacerá?',
+                'Pues bien, una futura mamá radiante puede saber todo esto y ahorrar mucho tiempo y dinero con esta guía completa, especialmente diseñada en Brasil, estudiada a fondo teniendo en cuenta las condiciones climáticas y la región donde nacerá su bebé, EXCLUSIVAMENTE PROPUESTA para una Futura Mamá Radiante.'
+            ],
+            titleBeneficiosBonus: 'La lactancia consciente te proporciona:',
+            titleHeadlineEbookBonus: ['MARAVILLAS QUE SOLO UNA EMBARAZADA RADIANTE PUEDE DISFRUTAR:'],
+            beneficiosBonus: [
+                'Técnicas avanzadas y únicas de lactancia.',
+                'Conocimientos especializados sobre cómo tener una lactancia rica en leche y saludable.',
+                'Conocimientos valiosos sobre cómo aumentar la producción de leche.',
+                'Información especializada sobre cómo prevenir y aliviar el dolor en el pecho.',
+                'Técnicas avanzadas de extracción de leche.',
+                'Habilidades únicas para determinar si su bebé está recibiendo suficiente leche.',
+                'Conocimiento de los problemas más comunes en la lactancia y cómo resolverlos.',
+                'Conocimiento sobre los mejores y peores alimentos para la producción de leche.',
+                'Técnicas avanzadas de lactancia en el trabajo.',
+                'Acceso directo a personas capacitadas para responder sus preguntas.'
+                ]
+        },
+        avisoEmbaixoDoPreco: 'Este precio es una promoción y puede ser cambiado en cualquier momento sin previo aviso.',
+        urlLinkWhatsapp: '',
+        urlCardAposBeneficios: 'cuidado-gravidez-radiante-ES',
+        urlCardAposBeneficiosBonus: 'importante-amamentacao-ES',
+        urlImageCapa: 'gravidez-radiante-es',
+        urlImageCapaSecudaria: 'gravidez-radiante-es-2',
+        urlImageCapaBonus: 'amamentacao-es',
+        urlImageCapaBonusSecudaria: 'amamentacao-es-2',
+        urlImageIntroducao: 'introducao-gravidez-radiante-es',
+        urlImagesPrevia: ['esGravidezRadianteIntroducao1.png', 'esGravidezRadianteIntroducao2.png', 'esGravidezRadianteCapitulo1.png', 'esGravidezRadianteCapitulo2.png'],
+        urlImagesDepoimentos: ['feedback-gravidez-es-1.jpg', 'feedback-gravidez-es-2.jpg', 'feedback-gravidez-es-3.jpg', 'feedback-gravidez-es-4.jpg']
+    }, 
     {
         uuid: '0a68673d-6cea-4b8e-9cf9-dfd940f41a5f',
         uuidVideo: '0a68673d-6cea-4b8e-9cf9-dfd940f41a5f',
