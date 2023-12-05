@@ -1,60 +1,37 @@
-import { BeneficionsHeadlineFinal } from "@/interfaces/Ebook";
 import Preco from "../Preco";
 import MyImage from "../MyImageLazy";
-import CardBeneficios from "../CardBeneficios/CardBeneficios";
 interface HeadlineBonusProps {
     moeda: '€' | 'R$' | '$'
     language: 'PT' | 'ES' | 'ENG'
     urlCapaEbook: string
     precoMaior: string
     precoMenor: string
-    itensHeadlineFinal: BeneficionsHeadlineFinal[]
     avisoEmbaixoDoPreco: string
     tituloBonus?: string
     exibirPrecoAposBeneficios?: boolean
     textoBonusEbookPrincipal?: string[]
-    titleHeadlineEbookBonus?: string[]
     fraseEmbaixoDoPreco?: string
     exibirPrecoBonus: boolean    
-    existeVideo: boolean
-    urlComprarProduto: string
-    textButtonToBuy: string
 }
 
 const HeadlineBonus = ({ 
   moeda, 
   precoMaior, 
   precoMenor, 
-  itensHeadlineFinal, 
   tituloBonus,
   language, 
   urlCapaEbook, 
   avisoEmbaixoDoPreco,
   textoBonusEbookPrincipal,
-  titleHeadlineEbookBonus,
   exibirPrecoAposBeneficios,
   fraseEmbaixoDoPreco,
-  exibirPrecoBonus,
-  existeVideo, 
-  urlComprarProduto,
-  textButtonToBuy
+  exibirPrecoBonus
 }: HeadlineBonusProps) => {
 
   const deveExibirPreco = (!exibirPrecoAposBeneficios && exibirPrecoBonus);
 
   return (
       <div className='HeadlineBonus'>
-        {
-          existeVideo ? null : 
-            <CardBeneficios 
-              itensHeadlineFinal={itensHeadlineFinal} 
-              language={language} 
-              titleHeadlineEbookBonus={titleHeadlineEbookBonus} 
-              exibirBotaoCTA={existeVideo}
-              textButtonToBuy={textButtonToBuy}
-              urlComprarProduto={urlComprarProduto}
-            />
-        }
 
         {
           tituloBonus ? <div className='ProdutoEspecifico__tittle'>{tituloBonus}</div> : null
