@@ -135,49 +135,62 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         urlComprarProduto={ebookAtual.urlComprarProduto}
       />
 
-      <HeadlineBonus
-        moeda={ebookAtual.moeda}
-        language={ebookAtual.linguagem}
-        urlCapaEbook={ebookAtual.urlImageCapaBonus}
-        precoMaior={ebookAtual.bonus.precoMaior}
-        precoMenor={ebookAtual.bonus.precoMenor}
-        itensHeadlineFinal={ebookAtual.itensHeadlineFinal}
-        tituloBonus={ebookAtual.tituloBonus}
-        exibirPrecoAposBeneficios={ebookAtual.bonus.exibirPrecoAposBeneficios}
-        textoBonusEbookPrincipal={ebookAtual.bonus.textoBonusEbookPrincipal}
-        titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus}
-        exibirPrecoBonus={ebookAtual.bonus.exibirPrecoBonus}
-        avisoEmbaixoDoPreco={ebookAtual.avisoEmbaixoDoPreco}
-        existeVideo={ebookAtual.existeVideo}
-        textButtonToBuy={ebookAtual.textButtonToBuy}
-        urlComprarProduto={ebookAtual.urlComprarProduto}
-      />
+        {
+          ebookAtual.existeVideo ? null : 
+            <CardBeneficios 
+              itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
+              language={ebookAtual.linguagem} 
+              titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
+              exibirBotaoCTA={ebookAtual.existeVideo}
+              textButtonToBuy={ebookAtual.textButtonToBuy}
+              urlComprarProduto={ebookAtual.urlComprarProduto}
+            />
+        }
 
-      <BeneficiosBonus 
-        beneficios={ebookAtual.bonus.beneficiosBonus} 
-        language={ebookAtual.linguagem}
-        titleBeneficiosBonus={ebookAtual.bonus.titleBeneficiosBonus}
-        urlCardAposBeneficios={ebookAtual.urlCardAposBeneficiosBonus}
-      />
+      {
+        ebookAtual.existeEbookBonus ? 
+          <>
+            <HeadlineBonus
+              moeda={ebookAtual.moeda}
+              language={ebookAtual.linguagem}
+              urlCapaEbook={ebookAtual.urlImageCapaBonus}
+              precoMaior={ebookAtual.bonus.precoMaior}
+              precoMenor={ebookAtual.bonus.precoMenor}
+              tituloBonus={ebookAtual.tituloBonus}
+              exibirPrecoAposBeneficios={ebookAtual.bonus.exibirPrecoAposBeneficios}
+              textoBonusEbookPrincipal={ebookAtual.bonus.textoBonusEbookPrincipal}
+              exibirPrecoBonus={ebookAtual.bonus.exibirPrecoBonus}
+              avisoEmbaixoDoPreco={ebookAtual.avisoEmbaixoDoPreco}
+            />
+
+            <BeneficiosBonus 
+              beneficios={ebookAtual.bonus.beneficiosBonus} 
+              language={ebookAtual.linguagem}
+              titleBeneficiosBonus={ebookAtual.bonus.titleBeneficiosBonus}
+              urlCardAposBeneficios={ebookAtual.urlCardAposBeneficiosBonus}
+            />
       
-      <div className={`dynamic__visible--mobile price__isVisible--${deveExibirPreco}`}>
-        <Preco 
-          language={ebookAtual.linguagem}
-          moeda={ebookAtual.moeda}
-          precoMaior={ebookAtual.bonus.precoMaior}
-          precoMenor={ebookAtual.bonus.precoMenor}
-          shouldShowButtonBuy={false}
-          textButtonToBuy=""
-          urlComprarProduto=""
-          nameEbookButton="falar-com-mariana"
-          fraseEmbaixoDoPreco={ebookAtual.bonus.fraseEmbaixoDoPreco}
-          avisoEmbaixoDoPreco={ebookAtual.avisoEmbaixoDoPreco}
-        />
-      </div>
+            <div className={`dynamic__visible--mobile price__isVisible--${deveExibirPreco}`}>
+              <Preco 
+                language={ebookAtual.linguagem}
+                moeda={ebookAtual.moeda}
+                precoMaior={ebookAtual.bonus.precoMaior}
+                precoMenor={ebookAtual.bonus.precoMenor}
+                shouldShowButtonBuy={false}
+                textButtonToBuy=""
+                urlComprarProduto=""
+                nameEbookButton="falar-com-mariana"
+                fraseEmbaixoDoPreco={ebookAtual.bonus.fraseEmbaixoDoPreco}
+                avisoEmbaixoDoPreco={ebookAtual.avisoEmbaixoDoPreco}
+              />
+            </div>
 
-      <div className={`Garantia__text fraseEmbaixoDoTextIsolada price__isVisible--${ebookAtual.bonus.exibirFraseEmbaixoDoPrecoIsolada}`}>
-        {ebookAtual.bonus.fraseEmbaixoDoPreco}
-      </div>
+            <div className={`Garantia__text fraseEmbaixoDoTextIsolada price__isVisible--${ebookAtual.bonus.exibirFraseEmbaixoDoPrecoIsolada}`}>
+              {ebookAtual.bonus.fraseEmbaixoDoPreco}
+            </div>
+          </>
+        : null
+      }
 
       <Garantia color={ebookAtual.colorNeonGarantia} language={ebookAtual.linguagem} />
 

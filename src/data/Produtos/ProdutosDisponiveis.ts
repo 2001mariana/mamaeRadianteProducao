@@ -6,6 +6,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: 'bfe7c2ec-307a-47f7-aeaf-a752270956c3',
         uuidVideo: 'bfe7c2ec-307a-47f7-aeaf-a752270956c3',
+        existeEbookBonus: true,
         isFunil: false,
         existeTerceiroBonus: false,
         existeVideo: false,
@@ -23,7 +24,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         tituloBonus: 'La Futura Mamá Radiante tiene el poder de desbloquear ofertas exclusivas que solo ella tiene',
         tituloHeadlineFinal: ['La oportunidad ha tocado a tu puerta!', 'Ahora, FINALMENTE, puedes ser dueña de un Embarazo Radiante'],
         precoMaior: '89,99',
-        precoMenor: '14,99',
+        precoMenor: '19,99',
         linguagem: 'ES',
         moeda: '€',
         capitulos: [
@@ -62,7 +63,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         ],
         bonus: {
             precoMaior: '99,99',
-            precoMenor: '9,99',
+            precoMenor: '8,99',
             exibirPrecoBonus: false,
             textoBonusEbookPrincipal: [
                 'Entendemos que la temporada en la que nace su bebé cambia todo en cuanto a la ropa y la cantidad que necesitará comprar para él. ¿Y si pudiera saber exactamente qué ropa comprar y cuánta para vestir a su bebé en la temporada y la región en la que nacerá?',
@@ -98,6 +99,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2198f56a-5627-56d6-b3bc-bca71385ef58',
         uuidVideo: '2198f56a-5627-56d6-b3bc-bca71385ef58',
+        existeEbookBonus: true,
         isFunil: false,
         existeTerceiroBonus: false,
         existeVideo: false,
@@ -112,7 +114,105 @@ export const ProdutosDisponiveis: Ebook[] = [
             'La lactancia consciente te enseña a nutrir el cuerpo y el alma de tu bebé con el alimento que más necesita en la vida: LA LECHE MATERNA. Con esto, puedes brindarle la fuerza, sustento y nutrición que todo bebé merece. Y le proporciona algo hermoso, esencial en su vida, único y poco conocido: la Lactancia Consciente.'
         ],
         precoMaior: '89,99',
-        precoMenor: '14,99',
+        precoMenor: '19,99',
+        linguagem: 'ES',
+        moeda: '€',
+        capitulos: [
+            'Introducción',
+            'Aumentando la Producción de Leche',
+            'Manejando el Dolor en los Pezones',
+            'Cómo Saber si el Bebé Está Recibiendo Suficiente Leche',
+            'Problemas Comunes en la Lactancia Materna',
+            'Lactancia Materna y Alimentación Materna',
+            'Suplementación y Almacenamiento de Leche Materna',
+            'Lactancia Materna en el Trabajo',
+            'Apoyo y Recursos para Madres que Amamantan',
+            'Conclusión'
+          ],         
+        tag: 'gravidez',
+        tituloHeadlineFinal: ['La oportunidad ha tocado a tu puerta!', 'Ahora, FINALMENTE, puedes brindar la mejor salud del mundo a tu bebé, la Lactancia Consciente.'],
+        tituloBeneficios: ['La lactancia consciente te proporciona:'],
+        tituloBonus: 'Al elegir tener una Lactancia Consciente, tienes el poder de desbloquear ofertas exclusivas como esta:',
+        textButtonToBuy: 'QUIERO TENER UNA LACTANCIA CONSCIENTE',
+        tituloDepoimentos: 'La lactancia consciente proporcionó la nutrición perfecta para la vida de estas embarazadas:',
+        textButtonToDepoimentos: 'QUIERO TENER UNA LACTANCIA CONSCIENTE',
+        aprendizados: [
+            'Técnicas avanzadas y únicas de lactancia.',
+            'Conocimientos especializados sobre cómo tener una lactancia rica en leche y saludable.',
+            'Conocimientos valiosos sobre cómo aumentar la producción de leche.',
+            'Información especializada sobre cómo prevenir y aliviar el dolor en el pecho.',
+            'Técnicas avanzadas de extracción de leche.',
+            'Habilidades únicas para determinar si su bebé está recibiendo suficiente leche.',
+            'Conocimiento de los problemas más comunes en la lactancia y cómo resolverlos.',
+            'Conocimiento sobre los mejores y peores alimentos para la producción de leche.',
+            'Técnicas avanzadas de lactancia en el trabajo.',
+            'Acceso directo a personas capacitadas para responder sus preguntas.'
+            ],
+        urlComprarProduto: 'aindaNãoTem',
+        itensHeadlineFinal: [
+            {item: 'Asistencia vía Whatsapp', icon: 'whatsapp'},
+            {item: 'Acceso de por vida', icon: 'infinity'},
+            {item: 'Desbloqueo de ofertas EXCLUSIVAS', icon: 'cadeado-aberto'}
+        ],
+        bonus: {
+            precoMaior: '89,99',
+            precoMenor: '8,99',
+            exibirPrecoBonus: false,
+            titleBeneficiosBonus: 'Tener un Embarazo Radiante es un camino de ida que te permite:',
+            titleHeadlineEbookBonus: [
+                'MARAVILLAS QUE SOLO QUIEN DECIDE TENER UNA LACTANCIA CONSCIENTE PUEDE DISFRUTAR:'
+            ],
+            textoBonusEbookPrincipal: [
+                'Establecer un vínculo afectivo con tu bebé es una de las partes esenciales para tener un embarazo radiante. Piensa en esto: si no escuchas a tu bebé, ¿cómo sabrás lo que necesita? ¿Si está bien o mal en tu vientre? De hecho, ¿es posible saberlo?',
+                '¿Sabías que los bebés sienten? Quieren cariño y también sienten tu amor, tus tristezas y alegrías. Pues bien, ¿cómo hacer que sienta solo cosas buenas y nazca ya feliz por tenerte como madre? ¿Es esto posible también?',
+                'Con el método de Embarazo Radiante, ¡todo esto no solo es posible, es un hecho! El embarazo radiante te permite salir de la oscuridad, enfrentar cualquier dragón que aparezca y ser la luz que tu bebé necesita, escuchándolo y guiándolo hacia la felicidad.'
+            ],
+            beneficiosBonus:  [
+                'Un VÍNCULO FUERTE con tu bebé incluso en tu vientre, convirtiéndote en una mamá amiga para él.',
+                'Compañía, ya que tu guía es tu amigo que te guía hacia un embarazo tranquilo, saludable y radiante.',
+                'Habilidades únicas y especializadas para enfrentar cualquier situación en el embarazo y convertirte en una Súper Mamá poderosa.',
+                'Estrategias especializadas para manejar el estrés y la ansiedad durante el embarazo, promoviendo un estado de tranquilidad.',
+                'Habilidades esenciales para el cuidado prenatal.',
+                'Técnicas avanzadas sobre cómo comunicarte con tu bebé y entenderlo incluso cuando todavía está en el vientre.',
+                'Rutinas saludables para ti y tu bebé, creando un entorno seguro y acogedor para ambos.',
+                'Una conexión amorosa y única con tu tesoro y ser amiga, incluso antes de que nazca, para que esté feliz de tenerte como mamá.',
+                'Crear un tesoro de recuerdos para compartir con tu hijo/a en el futuro.',
+                'Conexiones únicas con tus emociones, para reflexionar y escribir sobre ti y contar tus memorias durante el embarazo.',
+                'Las mejores tácticas para desvelar los mayores secretos sobre la organización que toda madre radiante necesita.',
+                'Habilidades fenomenales para tener la mejor nutrición en un embarazo radiante.',
+                'Conocimiento de diferentes opciones de parto, desde el parto natural hasta la cesárea, y cómo prepararte para el gran día.'
+                ],
+        },
+        avisoEmbaixoDoPreco: 'Este precio es una promoción y puede ser cambiado en cualquier momento sin previo aviso.',
+        urlLinkWhatsapp: '',
+        urlCardAposBeneficios: 'importante-amamentacao-ES',
+        urlCardAposBeneficiosBonus: 'cuidado-gravidez-radiante-ES',
+        urlImageCapa: 'amamentacao-es',
+        urlImageCapaSecudaria: 'amamentacao-es-2',
+        urlImageCapaBonus: 'gravidez-radiante-es',
+        urlImageCapaBonusSecudaria: 'gravidez-radiante-es-2',
+        urlImagesPrevia: ['amamentacaoESIntroducao', 'amamentacaoESSumario1', 'amamentacaoESSumario2'],
+        urlImagesDepoimentos: ['es-amamantacao-1', 'es-amamantacao-1-2', 'es-amamantacao-3', 'es-amamantacao-2', 'es-amamantacao-4']
+    },
+    {
+        uuid: '2149yz8a-5627-56d6-b3bc-bca71385ef58',
+        uuidVideo: '2149yz8a-5627-56d6-b3bc-bca71385ef58',
+        existeEbookBonus: false,
+        isFunil: true,
+        existeTerceiroBonus: false,
+        existeVideo: false,
+        exibirIntroducao: false,
+        idStyledByProduct: 'gravidez-radiante',
+        colorNeonGarantia: 'Blue',
+        nome: 'La nutrición perfecta para la vida de tu bebé existe y solo tú puedes brindársela!',
+        nomeEbook: 'amamentacao-consciente-ES',
+        descricao: [
+            'Ser madre va mucho más allá de dar vida a un niño; existen cosas importantes que deben hacerse por el bebé y nada es más importante que alimentarlo.',
+            'La alimentación del bebé es tan crucial como la gasolina para un automóvil, sin ella, el automóvil ni siquiera se mueve. Sin su alimento, el bebé no recibe los nutrientes necesarios para desarrollar un cuerpo sano y huesos fuertes, como es el sueño de toda madre.',
+            'La lactancia consciente te enseña a nutrir el cuerpo y el alma de tu bebé con el alimento que más necesita en la vida: LA LECHE MATERNA. Con esto, puedes brindarle la fuerza, sustento y nutrición que todo bebé merece. Y le proporciona algo hermoso, esencial en su vida, único y poco conocido: la Lactancia Consciente.'
+        ],
+        precoMaior: '89,99',
+        precoMenor: '8,99',
         linguagem: 'ES',
         moeda: '€',
         capitulos: [
@@ -156,6 +256,8 @@ export const ProdutosDisponiveis: Ebook[] = [
             precoMaior: '89,99',
             precoMenor: '14,99',
             exibirPrecoBonus: false,
+            titleHeadlineParabens: '¡Felicidades por elegir tener un Embarazo Radiante!!',
+            subtitleHeadlineParabens: 'A partir de ahora has pasado a un próximo nivel.',
             titleBeneficiosBonus: 'Tener un Embarazo Radiante es un camino de ida que te permite:',
             titleHeadlineEbookBonus: [
                 'MARAVILLAS QUE SOLO QUIEN DECIDE TENER UNA LACTANCIA CONSCIENTE PUEDE DISFRUTAR:'
@@ -195,6 +297,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '0a68673d-6cea-4b8e-9cf9-dfd940f41a5f',
         uuidVideo: '0a68673d-6cea-4b8e-9cf9-dfd940f41a5f',
+        existeEbookBonus: true,
         headlineVideo: 'Assista o video e descubra como é ter uma Gravidez Radiante:',
         // urlVideoYoutube: 'https://www.youtube.com/embed/q0hyYWKXF0Q?si=6LSAflDAg8gHozk-',
         isFunil: false,
@@ -293,6 +396,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2198f4da-4f27-45d6-b3bc-bca71385ed57',
         uuidVideo: '2198f4da-4f27-45d6-b3bc-bca71385ed57',
+        existeEbookBonus: true,
         isFunil: false,
         existeTerceiroBonus: false,
         existeVideo: false,
@@ -389,6 +493,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2198f4da-4f27-45d6-b3bc-bca71385ef58',
         uuidVideo: '2198f4da-4f27-45d6-b3bc-bca71385ef58',
+        existeEbookBonus: true,
         isFunil: false,
         existeTerceiroBonus: false,
         existeVideo: false,
@@ -483,6 +588,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2742f4da-4f27-45d6-b3bc-bca71385ed57',
         uuidVideo: '2742f4da-4f27-45d6-b3bc-bca71385ed57',
+        existeEbookBonus: true,
         isFunil: true,
         existeTerceiroBonus: true,
         existeVideo: false,
@@ -591,6 +697,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2897e359-4f27-45d6-b3bc-bca71385ed57',
         uuidVideo: '2897e359-4f27-45d6-b3bc-bca71385ed57',
+        existeEbookBonus: true,
         isFunil: true,
         existeTerceiroBonus: true,
         existeVideo: false,
