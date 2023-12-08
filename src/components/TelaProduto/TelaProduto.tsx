@@ -1,5 +1,5 @@
 import Ebook from '@/interfaces/Ebook';
-import { lazy, useEffect } from 'react';
+import { lazy, useEffect, useState } from 'react';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import * as fbq from '../../lib/fpixel'
 
@@ -23,16 +23,26 @@ import Footer from '../Footer';
 import Introducao from '../Introducao';
 import TelaVideo from '../TelaVideo';
 import CardBeneficios from '../CardBeneficios';
+import { useRouter } from 'next/router';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
 function TelaProduto({ebookAtual}: TelaProdutoProps) {
+  const [parametroFacebook, setParametroFacebook] = useState<string>('');
+  const [urlComprarComParametro, setUrlComprarComParametro] = useState<string>(ebookAtual.urlComprarProduto);
   const deveExibirPreco = (ebookAtual.bonus.exibirPrecoAposBeneficios && ebookAtual.bonus.exibirPrecoBonus);
-  // const exibirIntroducao = (ebookAtual.urlImageIntroducao && ebookAtual.urlImageIntroducaoAtencao);
   const uuidRotaParabens = '2742f4da-4f27-45d6-b3bc-bca71385ed57';
+  const router = useRouter();
 
   const purchaseEventParabens = () => {
     fbq.event('Purchase', { currency: 'BRL', value: 49.99 })
+  }
+
+  const pegarParametroFacebook = () => {
+    const rotaCompleta = router.asPath;
+    const uuidAtualNaRota = `/${ebookAtual.uuid}?`
+    const apenasParametro = rotaCompleta.replace(uuidAtualNaRota, '?')
+    setParametroFacebook(apenasParametro)
   }
   
   useEffect(() => {
@@ -40,6 +50,15 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       purchaseEventParabens()
     }
   },[ebookAtual.uuid])
+  
+  useEffect(() => {
+    pegarParametroFacebook()
+  },[router])
+  
+  useEffect(() => {
+    const urlComprarComParametro = `${ebookAtual.urlComprarProduto}${parametroFacebook}`
+    setUrlComprarComParametro(urlComprarComParametro)
+  },[parametroFacebook, urlComprarComParametro, ebookAtual.urlComprarProduto])
 
   return (
     <div className='ProdutoEspecifico' id={`headline--${ebookAtual.idStyledByProduct}`}>
@@ -62,7 +81,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       { ebookAtual.existeVideo ? 
         <>
           <TelaVideo
-            urlComprarProduto={ebookAtual.urlComprarProduto} 
+            urlComprarProduto={urlComprarComParametro} 
             textButtonCTA={ebookAtual.textButtonToBuy}
           /> 
           <CardBeneficios 
@@ -71,7 +90,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
             titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
             exibirBotaoCTA={ebookAtual.existeVideo}
             textButtonToBuy={ebookAtual.textButtonToBuy}
-            urlComprarProduto={ebookAtual.urlComprarProduto}
+            urlComprarProduto={urlComprarComParametro}
           />
         </>
         : null
@@ -82,7 +101,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         nameEbook={ebookAtual.nome} 
         nameEbookButton={ebookAtual.nomeEbook}
         textButtonToBuy={ebookAtual.textButtonToBuy} 
-        urlComprarProduto={ebookAtual.urlComprarProduto}
+        urlComprarProduto={urlComprarComParametro}
         urlCapaEbook={ebookAtual.urlImageCapa}
       />
 
@@ -91,7 +110,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         language={ebookAtual.linguagem} 
         textButtonToBuy={ebookAtual.textButtonToBuy} 
         nameEbookButton={ebookAtual.nomeEbook}
-        urlComprarProduto={ebookAtual.urlComprarProduto}
+        urlComprarProduto={urlComprarComParametro}
         urlCardAposBeneficios={ebookAtual.urlCardAposBeneficios}
         tituloBeneficios={ebookAtual.tituloBeneficios}
       />
@@ -132,7 +151,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         language={ebookAtual.linguagem} 
         urlImagesDepoimentos={ebookAtual.urlImagesDepoimentos} 
         tituloDepoimentos={ebookAtual.tituloDepoimentos}
-        urlComprarProduto={ebookAtual.urlComprarProduto}
+        urlComprarProduto={urlComprarComParametro}
       />
 
         {
@@ -143,7 +162,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
               titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
               exibirBotaoCTA={ebookAtual.existeVideo}
               textButtonToBuy={ebookAtual.textButtonToBuy}
-              urlComprarProduto={ebookAtual.urlComprarProduto}
+              urlComprarProduto={urlComprarComParametro}
             />
         }
 
@@ -207,7 +226,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         nameEbookButton={ebookAtual.nomeEbook}
         textButtonToBuyPackBonus={ebookAtual.textButtonToBuyPackBonus}
         existeTerceiroBonus={ebookAtual.existeTerceiroBonus}
-        urlComprarProduto={ebookAtual.urlComprarProduto}
+        urlComprarProduto={urlComprarComParametro}
         urlComprarPackBonus={ebookAtual.urlComprarPackBonus}
         urlCapaEbookPrincipal={ebookAtual.urlImageCapaSecudaria}
         urlCapaEbookSegundoBonus={ebookAtual.urlImageCapaBonusSecudaria}
