@@ -49,8 +49,8 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
     const pegarParametroFacebook = () => {
       const rotaCompleta = router.asPath;
       const rotaComVideo = rotaCompleta.includes('/video/');
-      const uuidAtualNaRota = `/${ebookAtual.uuid}?`
-      const uuidAtualVideoNaRota = `/video/${ebookAtual.uuid}?`
+      const uuidAtualNaRota = `/${ebookAtual.uuid}`
+      const uuidAtualVideoNaRota = `/video/${ebookAtual.uuid}`
       const apenasParametro = (rotaComVideo ? rotaCompleta.replace(uuidAtualVideoNaRota, '?') : rotaCompleta.replace(uuidAtualNaRota, '?'))
 
       setParametroFacebook(apenasParametro)
@@ -74,6 +74,8 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
   }, [router.events])
   
   useEffect(() => {
+    // const rotaCompleta = router.asPath;
+
     const urlComprarComParametro = `${ebookAtual.urlComprarProduto}${parametroFacebook}`
 
     setUrlComprarComParametro(urlComprarComParametro)
