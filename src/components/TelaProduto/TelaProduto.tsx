@@ -2,7 +2,7 @@ import Ebook from '@/interfaces/Ebook';
 import { lazy, useEffect, useState } from 'react';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import * as fbq from '../../lib/fpixel'
-import { SpeedInsights } from "@vercel/speed-insights/next"
+// import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Carousel = lazy(() => import('nuka-carousel'));
 const Garantia = lazy(() => import('@/components/Garantia'));
@@ -241,7 +241,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       <Faq idStyledByProduct={`FAQ--${ebookAtual.idStyledByProduct}`} language={ebookAtual.linguagem} />
 
       <Footer deveExibirLogo={true} />
-      <SpeedInsights />
+      {/* <SpeedInsights /> */}
     </div>
   )
 }
