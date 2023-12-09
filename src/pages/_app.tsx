@@ -2,29 +2,29 @@ import { controlBrowserLanguage } from '@/components/LanguageControl/LanguageCon
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import { createContext, useEffect, useState } from 'react';
-import * as fbq from '../lib/fpixel'
+// import * as fbq from '../lib/fpixel'
 import Script from 'next/script';
 
 export const LanguageContext = createContext<{updateContext: (formatedBrowserLanguage: "ES" | "ENG" | "PT") => void, contextValue: 'PT' | 'ES' | 'ENG' | ''}>({updateContext: () => {}, contextValue: ''});
 
 export default function App({ Component, pageProps }: AppProps) {
     const [defaultBrowserLanguage, setDefaultBrowserLanguage] = useState<'PT' | 'ES' | 'ENG' | ''>('')
-    const router = useRouter()
+    // const router = useRouter()
 
-  useEffect(() => {
-    fbq.pageview()
+  // useEffect(() => {
+  //   fbq.pageview()
 
-    const handleRouteChange = () => {
-      fbq.pageview()
-    }
+  //   const handleRouteChange = () => {
+  //     fbq.pageview()
+  //   }
 
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+  //   router.events.on('routeChangeComplete', handleRouteChange)
+  //   return () => {
+  //     router.events.off('routeChangeComplete', handleRouteChange)
+  //   }
+  // }, [router.events])
 
     useEffect(() => {
         const languageBrowser = window.navigator ? window.navigator.language : '';
@@ -47,7 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <LanguageContext.Provider value={{updateContext: updateSelectedLanguage, contextValue: defaultBrowserLanguage}}>
                     <div className='App--content'>
                         <Component {...pageProps} />
-                        <Script
+                        {/* <Script
                           id="fb-pixel"
                           strategy="afterInteractive"
                           dangerouslySetInnerHTML={{
@@ -64,7 +64,7 @@ export default function App({ Component, pageProps }: AppProps) {
                           fbq('track', 'PageView');                    
                           `,
                           }}
-                        />
+                        /> */}
                         <Script src="https://www.googletagmanager.com/gtag/js?id=G-EVY1Q6GR61" />
                         <Script
                           id='google-analytics'

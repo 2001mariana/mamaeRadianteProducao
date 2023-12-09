@@ -2,7 +2,6 @@ import Ebook from '@/interfaces/Ebook';
 import { lazy, useEffect, useState } from 'react';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import * as fbq from '../../lib/fpixel'
-// import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Carousel = lazy(() => import('nuka-carousel'));
 const Garantia = lazy(() => import('@/components/Garantia'));
@@ -25,6 +24,7 @@ import Introducao from '../Introducao';
 import TelaVideo from '../TelaVideo';
 import CardBeneficios from '../CardBeneficios';
 import { useRouter } from 'next/router';
+import Script from 'next/script';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
@@ -34,6 +34,19 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
   const deveExibirPreco = (ebookAtual.bonus.exibirPrecoAposBeneficios && ebookAtual.bonus.exibirPrecoBonus);
   const uuidRotaParabens = '2742f4da-4f27-45d6-b3bc-bca71385ed57';
   const router = useRouter();
+
+  useEffect(() => {
+    fbq.pageview()
+
+    const handleRouteChange = () => {
+      fbq.pageview()
+    }
+
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   const purchaseEventParabens = () => {
     fbq.event('Purchase', { currency: 'BRL', value: 49.99 })
@@ -62,7 +75,28 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
   },[parametroFacebook, urlComprarComParametro, ebookAtual.urlComprarProduto])
 
   return (
+    <>
+            
     <div className='ProdutoEspecifico' id={`headline--${ebookAtual.idStyledByProduct}`}>
+
+    <Script
+                          id="fb-pixel"
+                          strategy="afterInteractive"
+                          dangerouslySetInnerHTML={{
+                          __html: `
+                          !function(f,b,e,v,n,t,s)
+                          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                          n.queue=[];t=b.createElement(e);t.async=!0;
+                          t.src=v;s=b.getElementsByTagName(e)[0];
+                          s.parentNode.insertBefore(t,s)}(window, document,'script',
+                          'https://connect.facebook.net/en_US/fbevents.js');
+                          fbq('init', '802228641664490');
+                          fbq('track', 'PageView');                    
+                          `,
+                          }}
+                        />
 
       <ConfettiDisplay 
         title={ebookAtual.bonus.titleHeadlineParabens} 
@@ -241,8 +275,8 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       <Faq idStyledByProduct={`FAQ--${ebookAtual.idStyledByProduct}`} language={ebookAtual.linguagem} />
 
       <Footer deveExibirLogo={true} />
-      {/* <SpeedInsights /> */}
     </div>
+    </>
   )
 }
 
