@@ -39,39 +39,19 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
     fbq.event('Purchase', { currency: 'BRL', value: 49.99 })
   }
 
-  // const pegarParametroFacebook = () => {
-  //   const rotaCompleta = router.asPath;
-  //   const uuidAtualNaRota = `/${ebookAtual.uuid}?`
-  //   const apenasParametro = rotaCompleta.replace(uuidAtualNaRota, '?')
-  //   setParametroFacebook(apenasParametro)
-  // }
-  
   useEffect(() => {
     if (ebookAtual.uuid === uuidRotaParabens) {
       purchaseEventParabens()
     }
   },[ebookAtual.uuid])
-  
-  // useEffect(() => {
-  //   pegarParametroFacebook()
-  // },[router])
 
-  //  const pegarParametroFacebook = () => {
-  //   const rotaCompleta = router.asPath;
-  //   const uuidAtualNaRota = `/${ebookAtual.uuid}?`
-  //   const apenasParametro = rotaCompleta.replace(uuidAtualNaRota, '?')
-  //   setParametroFacebook(apenasParametro)
-  // }
-  
   useEffect(() => {
     const pegarParametroFacebook = () => {
       const rotaCompleta = router.asPath;
+      const rotaComVideo = rotaCompleta.includes('/video/');
       const uuidAtualNaRota = `/${ebookAtual.uuid}?`
-      const apenasParametro = rotaCompleta.replace(uuidAtualNaRota, '?')
-
-      // console.log('rotaCompleta', rotaCompleta)
-      // console.log('uuidAtualNaRota', uuidAtualNaRota)
-      // console.log('apenasParametro', apenasParametro)
+      const uuidAtualVideoNaRota = `/video/${ebookAtual.uuid}?`
+      const apenasParametro = (rotaComVideo ? rotaCompleta.replace(uuidAtualVideoNaRota, '?') : rotaCompleta.replace(uuidAtualNaRota, '?'))
 
       setParametroFacebook(apenasParametro)
     }
@@ -95,7 +75,6 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
   
   useEffect(() => {
     const urlComprarComParametro = `${ebookAtual.urlComprarProduto}${parametroFacebook}`
-    // console.log('urlComprarComParametro', urlComprarComParametro)
 
     setUrlComprarComParametro(urlComprarComParametro)
   },[parametroFacebook, urlComprarComParametro, ebookAtual.urlComprarProduto])
