@@ -35,6 +35,45 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
   const uuidRotaParabens = '2742f4da-4f27-45d6-b3bc-bca71385ed57';
   const router = useRouter();
 
+  const purchaseEventParabens = () => {
+    fbq.event('Purchase', { currency: 'BRL', value: 49.99 })
+  }
+
+  // const pegarParametroFacebook = () => {
+  //   const rotaCompleta = router.asPath;
+  //   const uuidAtualNaRota = `/${ebookAtual.uuid}?`
+  //   const apenasParametro = rotaCompleta.replace(uuidAtualNaRota, '?')
+  //   setParametroFacebook(apenasParametro)
+  // }
+  
+  useEffect(() => {
+    if (ebookAtual.uuid === uuidRotaParabens) {
+      purchaseEventParabens()
+    }
+  },[ebookAtual.uuid])
+  
+  // useEffect(() => {
+  //   pegarParametroFacebook()
+  // },[router])
+
+  //  const pegarParametroFacebook = () => {
+  //   const rotaCompleta = router.asPath;
+  //   const uuidAtualNaRota = `/${ebookAtual.uuid}?`
+  //   const apenasParametro = rotaCompleta.replace(uuidAtualNaRota, '?')
+  //   setParametroFacebook(apenasParametro)
+  // }
+  
+  useEffect(() => {
+    const pegarParametroFacebook = () => {
+      const rotaCompleta = router.asPath;
+      const uuidAtualNaRota = `/${ebookAtual.uuid}?`
+      const apenasParametro = rotaCompleta.replace(uuidAtualNaRota, '?')
+      setParametroFacebook(apenasParametro)
+    }
+
+    pegarParametroFacebook()
+  },[router.asPath, ebookAtual.uuid])
+  
   useEffect(() => {
     fbq.pageview()
 
@@ -46,28 +85,8 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
+    
   }, [router.events])
-
-  const purchaseEventParabens = () => {
-    fbq.event('Purchase', { currency: 'BRL', value: 49.99 })
-  }
-
-  const pegarParametroFacebook = () => {
-    const rotaCompleta = router.asPath;
-    const uuidAtualNaRota = `/${ebookAtual.uuid}?`
-    const apenasParametro = rotaCompleta.replace(uuidAtualNaRota, '?')
-    setParametroFacebook(apenasParametro)
-  }
-  
-  useEffect(() => {
-    if (ebookAtual.uuid === uuidRotaParabens) {
-      purchaseEventParabens()
-    }
-  },[ebookAtual.uuid])
-  
-  useEffect(() => {
-    pegarParametroFacebook()
-  },[router])
   
   useEffect(() => {
     const urlComprarComParametro = `${ebookAtual.urlComprarProduto}${parametroFacebook}`
