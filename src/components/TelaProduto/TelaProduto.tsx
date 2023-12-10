@@ -25,6 +25,7 @@ import TelaVideo from '../TelaVideo';
 import CardBeneficios from '../CardBeneficios';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+import PixelDisplay from '../PixelDisplay/PixelDisplay';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
@@ -74,8 +75,6 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
   }, [router.events])
   
   useEffect(() => {
-    // const rotaCompleta = router.asPath;
-
     const urlComprarComParametro = `${ebookAtual.urlComprarProduto}${parametroFacebook}`
 
     setUrlComprarComParametro(urlComprarComParametro)
@@ -86,6 +85,8 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
             
     <div className='ProdutoEspecifico' id={`headline--${ebookAtual.idStyledByProduct}`}>
 
+      <PixelDisplay language={ebookAtual.linguagem} />
+{/* 
     <Script
       id="fb-pixel"
       strategy="afterInteractive"
@@ -103,7 +104,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         fbq('track', 'PageView');                    
       `,
       }}
-    />
+    /> */}
 
       <ConfettiDisplay 
         title={ebookAtual.bonus.titleHeadlineParabens} 
