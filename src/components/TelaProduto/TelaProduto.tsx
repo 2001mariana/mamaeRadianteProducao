@@ -24,7 +24,6 @@ import Introducao from '../Introducao';
 import TelaVideo from '../TelaVideo';
 import CardBeneficios from '../CardBeneficios';
 import { useRouter } from 'next/router';
-import Script from 'next/script';
 import PixelDisplay from '../PixelDisplay/PixelDisplay';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
@@ -36,15 +35,16 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
   const uuidRotaParabens = '2742f4da-4f27-45d6-b3bc-bca71385ed57';
   const router = useRouter();
 
-  const purchaseEventParabens = () => {
-    fbq.event('Purchase', { currency: 'BRL', value: 49.99 })
-  }
-
   useEffect(() => {
+    
+    const purchaseEventParabens = () => {
+      fbq.event('Purchase', { currency: ebookAtual.moeda , value: ebookAtual.precoMenor })
+    }
+
     if (ebookAtual.uuid === uuidRotaParabens) {
       purchaseEventParabens()
     }
-  },[ebookAtual.uuid])
+  },[ebookAtual.uuid, ebookAtual.moeda, ebookAtual.precoMenor])
 
   useEffect(() => {
     const pegarParametroFacebook = () => {
