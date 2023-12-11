@@ -35,7 +35,7 @@
     width: 100%; height: 80vh;
   }
   #headline--gravidez-radiante .ProdutoEspecifico__content, #headline--gravidez-radiante div.HeadlineBonus__content > div.HeadlineBonus__content--text {
-    width: 100%; padding: 1% 6%; height: auto;
+    width: 100%; padding: 1% 4%; height: auto;
   }    
   #headline--gravidez-radiante div.ProdutoEspecifico__content--description { padding: 1% 5%; }
   #headline--gravidez-radiante div.HeadlineBonus { height: auto; }

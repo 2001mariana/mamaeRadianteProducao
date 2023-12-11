@@ -14,7 +14,6 @@
     line-height: 40px;
 }
 .HeadlineBonus__content.second-option {
-    /* border: 1px solid fuchsia; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,16 +22,12 @@
 div.HeadlineFinal.HeadlineBonus > div.HeadlineBonus__content.second-option > div.car {
     width: 100% !important;
     overflow: hidden;
-    /* border: 2px solid #c645d4; */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.HeadlineBonus__content.second-option .car img {
-    /* border: 1px solid rgb(0, 34, 255); */
-    width: 40vw;
-}
+.HeadlineBonus__content.second-option .car img { width: 40vw; }
 .HeadlineBonus__content {
     display: flex;
     flex-direction: row;

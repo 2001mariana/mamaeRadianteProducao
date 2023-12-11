@@ -70,6 +70,7 @@
     width: 100%;
     padding: 14px 0;
     text-align: justify;
+    /* border: 2px solid fuchsia; */
     line-height: 32px;
     font-weight: 400;
     font-size: 18px;
@@ -105,6 +106,7 @@
   font-size: 22px;
   padding: 12px 0;
   text-align: justify;
+  /* border: 2px solid greenyellow; */
 }
 .ProdutoEspecifico__headline--subtittle.column { display: flex; flex-direction: column;}
 .ProdutoEspecifico__headline--foco { font-weight: 600; }
