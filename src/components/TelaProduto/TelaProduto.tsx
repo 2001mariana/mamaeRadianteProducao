@@ -93,33 +93,6 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         shouldShowConfetti={ebookAtual.isFunil} 
       />
 
-      {
-        ebookAtual.exibirIntroducao ? 
-          <Introducao 
-            urlImageIntroducao={ebookAtual.urlImageIntroducao!} 
-            urlImageAtencao={ebookAtual.urlImageIntroducaoAtencao}
-          /> 
-          : null
-      }
-
-      { ebookAtual.existeVideo ? 
-        <>
-          <TelaVideo
-            urlComprarProduto={urlComprarComParametro} 
-            textButtonCTA={ebookAtual.textButtonToBuy}
-          /> 
-          <CardBeneficios 
-            itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
-            language={ebookAtual.linguagem} 
-            titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
-            exibirBotaoCTA={ebookAtual.existeVideo}
-            textButtonToBuy={ebookAtual.textButtonToBuy}
-            urlComprarProduto={urlComprarComParametro}
-          />
-        </>
-        : null
-      }
-
       <Headline 
         descricaoEbook={ebookAtual.descricao} 
         nameEbook={ebookAtual.nome} 
@@ -178,8 +151,8 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         urlComprarProduto={urlComprarComParametro}
       />
 
-        {
-          ebookAtual.existeVideo ? null : 
+        {/* {
+          ebookAtual.existeVideo ? null :  */}
             <CardBeneficios 
               itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
               language={ebookAtual.linguagem} 
@@ -188,7 +161,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
               textButtonToBuy={ebookAtual.textButtonToBuy}
               urlComprarProduto={urlComprarComParametro}
             />
-        }
+        {/* } */}
 
       {
         ebookAtual.existeEbookBonus ? 

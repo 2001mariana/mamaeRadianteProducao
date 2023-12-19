@@ -10,7 +10,18 @@
   background-color: #ffffff80;
   border-radius: 20px;
 }
-
+.App--content::-webkit-scrollbar, .Produtos::-webkit-scrollbar {
+  width: 8px;
+}
+    
+.App--content::-webkit-scrollbar-track, .Produtos::-webkit-scrollbar-track {
+  background: transparent;
+}
+    
+.App--content::-webkit-scrollbar-thumb, .Produtos::-webkit-scrollbar-thumb {
+  background-color: #ffffff80;
+  border-radius: 20px;
+}
 @media screen and (max-width: 450px) {
     .Contato::-webkit-scrollbar {
       width: 8px;

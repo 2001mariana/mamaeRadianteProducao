@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import NotFound from '@/components/NotFound';
 import LupaLoading from '@/components/LupaLoading';
 import { ProdutosDisponiveis } from '@/data/Produtos/ProdutosDisponiveis';
-import TelaProduto from '@/components/TelaProduto';
+import TelaVideo from '@/components/TelaVideo';
 
 export async function getStaticPaths() {
   const paths = ProdutosDisponiveis.map((post) => ({
@@ -43,7 +43,10 @@ function Index(props: {
   if (exibirLoading) {
     return <LupaLoading />
   } else if (ebookAtual !== undefined) {
-    return <TelaProduto ebookAtual={ebookAtual} />
+    return  <TelaVideo 
+              textButtonCTA={ebookAtual.textButtonToBuy} 
+              ebookAtual={ebookAtual}
+            />
   } else {
     return <NotFound />
   }
