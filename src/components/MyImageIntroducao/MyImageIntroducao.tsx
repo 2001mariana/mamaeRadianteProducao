@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-import introducaoGravidezRadiantePT from '../../assets/img/introducao/introducao-gravidez-radiante-pt.svg'
-import introducaoGravidezRadianteMobilePT from '../../assets/img/introducao/introducao-gravidez-radiante-pt-mobile.svg'
+import introducaoGravidezRadiantePT from '../../assets/img/introducao/introducao-gravidez-radiante-pt-1.svg'
+import introducaoGravidezRadianteMobilePT from '../../assets/img/introducao/introducao-gravidez-radiante-pt-mobile-1.svg'
 
-import introducaoGravidezRadianteES from '../../assets/img/introducao/introducao-gravidez-radiante-es.svg'
-import introducaoGravidezRadianteMobileES from '../../assets/img/introducao/introducao-gravidez-radiante-es-mobile.svg'
+import introducaoGravidezRadianteES from '../../assets/img/introducao/introducao-gravidez-radiante-es-1.svg'
+import introducaoGravidezRadianteMobileES from '../../assets/img/introducao/introducao-gravidez-radiante-es-mobile-1.svg'
 
-import atencaoGravidezRadiantePT from '../../assets/img/introducao/atencao-gravidez-radiante-pt.svg'
-import atencaoGravidezRadianteMobilePT from '../../assets/img/introducao/atencao-gravidez-radiante-pt-mobile.svg'
+import atencaoGravidezRadiantePT from '../../assets/img/introducao/atencao-gravidez-radiante-pt-1.svg'
+import atencaoGravidezRadianteMobilePT from '../../assets/img/introducao/atencao-gravidez-radiante-pt-mobile-1.svg'
 
 export function getImageByName(name: string) {
   if ('/introducao-gravidez-radiante-pt'.includes(name)) {

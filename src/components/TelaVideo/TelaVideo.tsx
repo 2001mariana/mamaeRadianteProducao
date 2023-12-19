@@ -43,12 +43,14 @@ function TelaVideo({textButtonCTA, ebookAtual}: TelaVideoProps) {
       /> 
 
       <div className='ProdutoEspecifico__video'>
-        <div className='ProdutoEspecifico__video--messias'>
-          <iframe loading="lazy" 
-            style={{position: "absolute", width: "100%", height: "100%", top: "0", left: "0", border: "none", padding: "0", margin: "0"}}
-            src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF3bQx0ZWk&#x2F;watch?embed" allow="fullscreen">
-          </iframe>
-        </div>
+
+        <iframe 
+          width="100%" 
+          height="100%" 
+          src={ebookAtual.urlVideoYoutube} 
+          title="YouTube video player" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; allowfullscreen"
+        />
       </div>
 
       <div className='video__button-cta'>

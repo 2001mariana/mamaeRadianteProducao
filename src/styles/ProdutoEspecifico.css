@@ -267,6 +267,7 @@
   .ProdutoEspecifico__funil--confetti > div { width: 50%; }
   .ProdutoEspecifico__funil--confetti > div:nth-child(3n) { display: none; }
   .ProdutoEspecifico__funil--parabens { font-size: 34px; }
+  .ProdutoEspecifico__video { width: 80% !important; height: 40vh !important; }  
 }
 @media only screen and (max-width: 750px) {
   .Depoimentos--images > .Depoimento { margin: 1%; }  
@@ -283,7 +284,7 @@
     top: -95px;
   }
   .ProdutoEspecifico__funil > .ProdutoEspecifico__funil--confetti { height: 65%; }
-  .ProdutoEspecifico__video { width: 90% !important;  }  
+  .ProdutoEspecifico__video { width: 90% !important; height: 30vh !important; }  
 }
 @media only screen and (max-width: 660px) {  
   div.HeadlineFinal.HeadlineBonus .dynamic__image img { height: auto; max-width: 110% !important; }
