@@ -54,7 +54,7 @@ function TelaVideo({textButtonCTA, ebookAtual}: TelaVideoProps) {
       </div>
 
       <div className='video__button-cta'>
-        <Link href={ebookAtual.urlComprarProduto}>
+        <Link href={`${ebookAtual.urlComprarProduto}${parametroFacebook}`}>
           <Button 
             className='animation-pulse' 
             variant='neon' 
