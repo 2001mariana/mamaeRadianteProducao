@@ -5,6 +5,7 @@ import CardBeneficios from '../CardBeneficios';
 import Ebook from '@/interfaces/Ebook';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import PixelDisplay from '../PixelDisplay/PixelDisplay';
 
 interface TelaVideoProps { 
   ebookAtual: Ebook;
@@ -36,7 +37,9 @@ function TelaVideo({textButtonCTA, ebookAtual}: TelaVideoProps) {
   },[parametroFacebook, urlComprarComParametro, ebookAtual.urlComprarProduto])
 
   return (
-    <div className='TESTE1234'>
+    <div>
+      <PixelDisplay language={ebookAtual.linguagem} />
+
       <Introducao 
         urlImageIntroducao={ebookAtual.urlImageIntroducao!} 
         urlImageAtencao={ebookAtual.urlImageIntroducaoAtencao}
