@@ -9,10 +9,12 @@ import PixelDisplay from '../PixelDisplay/PixelDisplay';
 
 interface TelaVideoProps { 
   ebookAtual: Ebook;
-  textButtonCTA: string; 
+  // textButtonCTA: string; 
+  existePixel: boolean
+  exibirBotaoVerPagina: boolean
 }
 
-function TelaVideo({textButtonCTA, ebookAtual}: TelaVideoProps) {
+function TelaVideo({ ebookAtual, existePixel, exibirBotaoVerPagina}: TelaVideoProps) {
   const [parametroFacebook, setParametroFacebook] = useState<string>('');
   const [urlComprarComParametro, setUrlComprarComParametro] = useState<string>(ebookAtual.urlComprarProduto);  
   const router = useRouter();  
@@ -38,7 +40,9 @@ function TelaVideo({textButtonCTA, ebookAtual}: TelaVideoProps) {
 
   return (
     <div>
-      <PixelDisplay language={ebookAtual.linguagem} />
+      {
+        existePixel ? <PixelDisplay language={ebookAtual.linguagem} /> : null
+      }
 
       <Introducao 
         urlImageIntroducao={ebookAtual.urlImageIntroducao!} 
@@ -63,18 +67,22 @@ function TelaVideo({textButtonCTA, ebookAtual}: TelaVideoProps) {
             variant='neon' 
             color='Green' 
             size='Large' 
-            text={textButtonCTA}
+            text={ebookAtual.textButtonToBuy}
           />
         </Link>
 
-        <Link href={`../../${ebookAtual.uuid}${parametroFacebook}`}>
-          <Button 
-            variant='outlined' 
-            color='Green' 
-            size='Large' 
-            text='Ver página'
-          />
-        </Link>
+        {
+          exibirBotaoVerPagina ? 
+            <Link href={`../../${ebookAtual.uuid}${parametroFacebook}`}>
+              <Button 
+                variant='outlined' 
+                color='Green' 
+                size='Large' 
+                text='Ver página'
+              />
+            </Link>
+          : null
+        }
       </div>
 
       <CardBeneficios 
@@ -94,7 +102,7 @@ function TelaVideo({textButtonCTA, ebookAtual}: TelaVideoProps) {
             variant='neon' 
             color='Green' 
             size='Large' 
-            text={textButtonCTA}
+            text={ebookAtual.textButtonToBuy}
           />
         </Link>
       </div>

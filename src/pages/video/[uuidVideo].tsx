@@ -44,8 +44,9 @@ function Index(props: {
     return <LupaLoading />
   } else if (ebookAtual !== undefined) {
     return  <TelaVideo 
-              textButtonCTA={ebookAtual.textButtonToBuy} 
               ebookAtual={ebookAtual}
+              existePixel
+              exibirBotaoVerPagina
             />
   } else {
     return <NotFound />

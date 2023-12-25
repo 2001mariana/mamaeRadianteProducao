@@ -478,7 +478,7 @@ export const ProdutosDisponiveis: Ebook[] = [
                 'Habilidades de saber onde comprar roupas e acessórios bons e baratos para bebês.'
             ]
         },
-        avisoEmbaixoDoPreco: 'Este preço é promoção de BlackFriday, podendo ser alterado a qualquer momento sem aviso prévio',
+        avisoEmbaixoDoPreco: 'Este preço é promoção de inauguração, podendo ser alterado a qualquer momento sem aviso prévio',
         urlComprarProduto: 'https://pay.kiwify.com.br/6JQdnmL',
         urlLinkWhatsapp: 'https://api.whatsapp.com/send?phone=5524993230596&text=Oi%20estou%20com%20duvidas%20sobre%20o%20gravidez%20radiante',
         urlCardAposBeneficios: 'cuidado-gravidez-radiante-PT',
@@ -577,7 +577,7 @@ export const ProdutosDisponiveis: Ebook[] = [
                 'Contato direto com pessoas capacitadas para tirar a suas dúvidas. '
             ],
         },
-        avisoEmbaixoDoPreco: 'Este preço é promoção de BlackFriday, podendo ser alterado a qualquer momento sem aviso prévio',
+        avisoEmbaixoDoPreco: 'Este preço é promoção de inauguração, podendo ser alterado a qualquer momento sem aviso prévio',
         urlComprarProduto: 'https://pay.kiwify.com.br/uoDVSkp',
         urlComprarProdutoTelaBonus: 'https://pay.kiwify.com.br/Cu8SR7T',
         urlLinkWhatsapp: 'https://api.whatsapp.com/send?phone=5524993230596&text=oi%20tenho%20duvidas%20sobre%20o%20guia%20de%20modas',
@@ -674,7 +674,7 @@ export const ProdutosDisponiveis: Ebook[] = [
                 'Habilidades de saber onde comprar roupas e acessórios bons e baratos para bebês.'
             ]
         },
-        avisoEmbaixoDoPreco: 'Este preço é promoção de BlackFriday, podendo ser alterado a qualquer momento sem aviso prévio',
+        avisoEmbaixoDoPreco: 'Este preço é promoção de inauguração, podendo ser alterado a qualquer momento sem aviso prévio',
         urlComprarProduto: 'https://pay.kiwify.com.br/fAz3lq5',
         urlLinkWhatsapp: 'https://api.whatsapp.com/send?phone=5524993230596&text=oi%20tenho%20duvidas%20sobre%20o%20guia%20da%20amamenta%C3%A7%C3%A3o%20perfeita',
         urlCardAposBeneficios: 'importante-amamentacao-PT',
@@ -783,7 +783,7 @@ export const ProdutosDisponiveis: Ebook[] = [
                 'Contato direto com pessoas capacitadas para tirar a suas dúvidas. '
             ],
         },
-        avisoEmbaixoDoPreco: 'Este preço é promoção de BlackFriday, podendo ser alterado a qualquer momento sem aviso prévio',
+        avisoEmbaixoDoPreco: 'Este preço é promoção de inauguração, podendo ser alterado a qualquer momento sem aviso prévio',
         urlComprarProduto: 'https://pay.kiwify.com.br/Cu8SR7T',
         urlComprarPackBonus: 'https://pay.kiwify.com.br/EcYetqp',
         urlLinkWhatsapp: 'https://api.whatsapp.com/send?phone=5524993230596&text=Oi%20estou%20com%20duvidas%20sobre%20os%20b%C3%B4nus',
@@ -896,7 +896,7 @@ export const ProdutosDisponiveis: Ebook[] = [
                 'Conhecimento de diferentes opções de parto, desde parto natural até cesariana, e como se preparar para o grande dia.'
             ],
         },
-        avisoEmbaixoDoPreco: 'Este preço é promoção de BlackFriday, podendo ser alterado a qualquer momento sem aviso prévio',
+        avisoEmbaixoDoPreco: 'Este preço é promoção de inauguração, podendo ser alterado a qualquer momento sem aviso prévio',
         urlComprarProduto: 'https://pay.kiwify.com.br/Cu8SR7T',
         urlComprarPackBonus: 'https://pay.kiwify.com.br/EcYetqp',
         urlLinkWhatsapp: 'https://api.whatsapp.com/send?phone=5524993230596&text=Oi%20estou%20com%20duvidas%20sobre%20os%20b%C3%B4nus',

@@ -34,7 +34,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid palegreen; */
+}
+
+.Button__bottom--whatsapp {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
 }
 
 .exibir-somente-mobile { display: none; }

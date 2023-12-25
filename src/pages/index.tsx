@@ -5,6 +5,9 @@ import { ProdutosDisponiveis } from "@/data/Produtos/ProdutosDisponiveis";
 import { useContext } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
+import Button from "@/components/Button";
+import Contato__link from "@/components/Contato__link";
+import { BsWhatsapp } from "react-icons/bs";
 
 function Produtos() {
   const { contextValue }  = useContext(LanguageContext);

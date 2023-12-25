@@ -25,6 +25,9 @@ import TelaVideo from '../TelaVideo';
 import CardBeneficios from '../CardBeneficios';
 import { useRouter } from 'next/router';
 import PixelDisplay from '../PixelDisplay/PixelDisplay';
+import Contato__link from '../Contato__link';
+import { BsWhatsapp } from 'react-icons/bs';
+import Button from '../Button';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
@@ -86,6 +89,8 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
     <div className='ProdutoEspecifico' id={`headline--${ebookAtual.idStyledByProduct}`}>
 
       <PixelDisplay language={ebookAtual.linguagem} />
+
+      <TelaVideo ebookAtual={ebookAtual} exibirBotaoVerPagina={false} existePixel={false} />
 
       <ConfettiDisplay 
         title={ebookAtual.bonus.titleHeadlineParabens} 
@@ -153,14 +158,14 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
 
         {/* {
           ebookAtual.existeVideo ? null :  */}
-            <CardBeneficios 
+            {/* <CardBeneficios 
               itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
               language={ebookAtual.linguagem} 
               titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
               exibirBotaoCTA={ebookAtual.existeVideo}
               textButtonToBuy={ebookAtual.textButtonToBuy}
               urlComprarProduto={urlComprarComParametro}
-            />
+            /> */}
         {/* } */}
 
       {
@@ -235,6 +240,14 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       <SuporteWhatsapp language={ebookAtual.linguagem} urlLinkWhatsapp={ebookAtual.urlLinkWhatsapp} />
 
       <Faq idStyledByProduct={`FAQ--${ebookAtual.idStyledByProduct}`} language={ebookAtual.linguagem} />
+      
+      <div className="Button__bottom--whatsapp">
+          <a href='https://api.whatsapp.com/send?phone=5524993230596'>
+            <Button color='Green' size='Large' text='' variant='neon' espacamentoChildren={false}>
+              <BsWhatsapp size={30}  /> 
+            </Button>
+          </a>
+        </div>
 
       <Footer deveExibirLogo={true} />
     </div>
