@@ -98,6 +98,7 @@ div.HeadlineFinal.HeadlineBonus > div.HeadlineBonus__content.second-option > div
     }
     .HeadlineBonus > .ProdutoEspecifico__tittle {
       height: auto;
+      width: 100%;
     }
     .HeadlineBonus__content--image {
         width: 45%;
