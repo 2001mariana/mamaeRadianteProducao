@@ -215,7 +215,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
 
       <Garantia color={ebookAtual.colorNeonGarantia} language={ebookAtual.linguagem} />
 
-      <HeadlineFinal 
+      {/* <HeadlineFinal 
         language={ebookAtual.linguagem} 
         moeda={ebookAtual.moeda} 
         titulo={ebookAtual.tituloHeadlineFinal}
@@ -235,7 +235,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         textoOpcao1HeadlineFinal={ebookAtual.textoOpcao1HeadlineFinal}
         textoOpcao2HeadlineFinal={ebookAtual.textoOpcao2HeadlineFinal}
         avisoEmbaixoDoPreco={ebookAtual.avisoEmbaixoDoPreco}
-      />
+      /> */}
 
       <SuporteWhatsapp language={ebookAtual.linguagem} urlLinkWhatsapp={ebookAtual.urlLinkWhatsapp} />
 
