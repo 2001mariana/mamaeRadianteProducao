@@ -90,7 +90,10 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
 
       <PixelDisplay language={ebookAtual.linguagem} />
 
-      <TelaVideo ebookAtual={ebookAtual} exibirBotaoVerPagina={false} existePixel={false} />
+      {
+        ebookAtual.existeVideo ? <TelaVideo ebookAtual={ebookAtual} exibirBotaoVerPagina={false} existePixel={false} /> : null
+      }
+      
 
       <ConfettiDisplay 
         title={ebookAtual.bonus.titleHeadlineParabens} 

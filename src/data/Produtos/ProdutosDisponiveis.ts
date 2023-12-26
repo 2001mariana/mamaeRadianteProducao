@@ -401,7 +401,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         urlVideoYoutube: 'https://www.youtube.com/embed/jhXePLGn6AY?si=uaoQQFgP_1jrZzHR',
         isFunil: false,
         existeTerceiroBonus: false,
-        existeVideo: false,
+        existeVideo: true,
         exibirIntroducao: false,
         idStyledByProduct: 'gravidez-radiante',
         colorNeonGarantia: 'Blue',
