@@ -28,6 +28,7 @@ import PixelDisplay from '../PixelDisplay/PixelDisplay';
 import Contato__link from '../Contato__link';
 import { BsWhatsapp } from 'react-icons/bs';
 import Button from '../Button';
+import Link from 'next/link';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
@@ -76,6 +77,31 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
     }
     
   }, [router.events])
+
+  // useEffect(() => {
+  //   const pegarApenasParametrodaRota = () => {   
+  //     const rotaCompleta = router.asPath;
+  //     const apenasParametro = rotaCompleta.replace(`/${ebookAtual.uuid}`, '');
+   
+  //     console.log('apenasParametro', apenasParametro)
+
+  //     setParametroFacebook(apenasParametro)
+  //     // setUrlComprarComParametro(apenasParametro)
+  //     return apenasParametro
+  //   }
+  //   pegarApenasParametrodaRota()
+
+  //   // const apenasParametro = pegarApenasParametrodaRota()
+  //   // setParametroFacebook(apenasParametro)
+  // },[router.asPath, ebookAtual.uuid])
+
+
+  useEffect(() => {
+    const urlComParametro = `${ebookAtual.urlComprarProduto}?${parametroFacebook}`
+
+    console.log('urlComParametro', urlComParametro)
+    setUrlComprarComParametro(urlComParametro)
+  },[parametroFacebook, urlComprarComParametro, ebookAtual.urlComprarProduto])
   
   useEffect(() => {
     const urlComprarComParametro = `${ebookAtual.urlComprarProduto}${parametroFacebook}`
@@ -93,7 +119,33 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       {
         ebookAtual.existeVideo ? <TelaVideo ebookAtual={ebookAtual} exibirBotaoVerPagina={false} existePixel={false} /> : null
       }
-      
+
+{
+          ebookAtual.existeVideo ? 
+          <>
+            <div className='video__button-cta'> 
+              <Link href={urlComprarComParametro}>
+                <Button 
+                  className='animation-pulse' 
+                  variant='neon' 
+                  color='Green' 
+                  size='Large' 
+                  text={ebookAtual.textButtonToBuy}
+                />
+              </Link>
+            </div>
+
+            <CardBeneficios 
+              itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
+              language={ebookAtual.linguagem} 
+              titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
+              exibirBotaoCTA={ebookAtual.existeVideo}
+              textButtonToBuy={ebookAtual.textButtonToBuy}
+              urlComprarProduto={urlComprarComParametro}
+            /> 
+            
+          </>
+      : null }
 
       <ConfettiDisplay 
         title={ebookAtual.bonus.titleHeadlineParabens} 

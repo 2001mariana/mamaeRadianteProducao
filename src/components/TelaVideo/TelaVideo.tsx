@@ -59,8 +59,9 @@ function TelaVideo({ ebookAtual, existePixel, exibirBotaoVerPagina}: TelaVideoPr
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; allowfullscreen"
         />
       </div>
-
-      <div className='video__button-cta'>
+{
+          exibirBotaoVerPagina ? <>
+      <div className='video__button-cta'> 
         <Link href={`${ebookAtual.urlComprarProduto}${parametroFacebook}`}>
           <Button 
             className='animation-pulse' 
@@ -71,8 +72,7 @@ function TelaVideo({ ebookAtual, existePixel, exibirBotaoVerPagina}: TelaVideoPr
           />
         </Link>
 
-        {
-          exibirBotaoVerPagina ? 
+       
             <Link href={`../../${ebookAtual.uuid}${parametroFacebook}`}>
               <Button 
                 variant='outlined' 
@@ -81,8 +81,6 @@ function TelaVideo({ ebookAtual, existePixel, exibirBotaoVerPagina}: TelaVideoPr
                 text='Ver página'
               />
             </Link>
-          : null
-        }
       </div>
 
       <CardBeneficios 
@@ -91,10 +89,14 @@ function TelaVideo({ ebookAtual, existePixel, exibirBotaoVerPagina}: TelaVideoPr
         titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
         exibirBotaoCTA={ebookAtual.existeVideo}
         textButtonToBuy={ebookAtual.textButtonToBuy}
-        urlComprarProduto={urlComprarComParametro}
-      />
+        urlComprarProduto={`${ebookAtual.urlComprarProduto}${parametroFacebook}`}
+      /></>
+          : null
+        }
 
-      
+{/*       
+{
+          exibirBotaoVerPagina ?
       <div className='video__button-cta exibir-somente-mobile'>
         <Link href={ebookAtual.urlComprarProduto}>
           <Button 
@@ -106,6 +108,7 @@ function TelaVideo({ ebookAtual, existePixel, exibirBotaoVerPagina}: TelaVideoPr
           />
         </Link>
       </div>
+      : null } */}
     </div>
   )
 }
