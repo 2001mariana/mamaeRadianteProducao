@@ -18,7 +18,7 @@ function Footer({deveExibirLogo}: FooterProps) {
           </div> 
         : null
       }
-      <div className="Footer__copy">© Mamãe Radiante | Copyright © 2023 Todos os Direitos Reservados.</div>
+      <div className="Footer__copy">© Mamãe Radiante | Copyright © 2024 Todos os Direitos Reservados.</div>
       <div className="Footer__contato">
         <Contato__link exibirNomeRedeSocial={false} redeSocial='Whatsapp' href='https://api.whatsapp.com/send?phone=5524993230596'>
           <BsWhatsapp size={30}  /> 

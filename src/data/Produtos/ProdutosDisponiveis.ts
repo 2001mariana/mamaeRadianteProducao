@@ -421,9 +421,12 @@ export const ProdutosDisponiveis: Ebook[] = [
         moeda: 'R$',
         capitulos: [
             'Descobrindo a Magia da Gravidez', 
+            'Alimentação Saudável para uma Gravidez Radiante',
+            'As Fases na Gravidez - Do 1º ao 9º Mês',
             'Nutrindo o Corpo e a Alma', 
             'Cuidados Pré-Natais Essenciais', 
             'Fortalecendo a Conexão Mãe e Bebê', 
+            'Guia de Suplementação para Gestantes',
             'Preparando-se para o Parto e Além',
             'Encontrando Apoio na Comunidade',
             'Celebrando a Maternidade',
