@@ -2,14 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    letter-spacing: 0.1em;
-    min-height: 75%;
     height: auto;
-    width: 90%;
-    margin: 1rem auto;
-    padding: 2rem 0;
+    margin: 0.75rem auto;
+    padding: 1rem 0.5rem;
 }
+.Garantia > div.Garantia__image > img { width: auto; }
+.Garantia > div.Garantia__image > img.CardNeon--Purple { border-radius: 65px; }
 .Garantia__image {padding: 1rem 0 3rem 0;}
 .Garantia > .Garantia__tittle > span.Garantia__days { font-size: 92px; } 
 .Garantia > .Garantia__tittle {
@@ -40,6 +38,7 @@
       0 0 10px #40cfff, 
       0 0 98px black;
 } 
+.CardNeon--Purple { box-shadow: 0 0 10px #FFFFFF, 0 2px 20px  #ab3ed8, 4px 4px 10px  #ab3ed8}
 .Garantia--Green {
     color: #b3f6ac;
     text-shadow: 
@@ -66,13 +65,3 @@
     color: #0C3A76;
     text-shadow: 2px 2px 20px #cdddf2, 0 0 10px #ab3ed8, 2px 2px 8px #ffffff;
 }
-/* @media only screen and (max-width: 880px) {
-  .Garantia {
-      height: 80%;
-  }
-}
-@media only screen and (max-width: 680px) {
-  .Garantia {
-      height: 70%;
-  }
-} */

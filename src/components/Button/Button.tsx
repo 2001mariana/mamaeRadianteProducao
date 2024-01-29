@@ -31,7 +31,7 @@ function Button({ text, variant, color, size, isRounded = true, espacamentoChild
 
   return (
     <button id={id} className={buttonClasses} {...props}>
-        <span className={buttonChildrenClasses}>{children}</span>
+        {children ? <span className={buttonChildrenClasses}>{children}</span> : null }
         <div className='Button__title'>{text}</div>
     </button>
   );

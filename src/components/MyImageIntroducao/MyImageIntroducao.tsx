@@ -1,29 +1,27 @@
 import Image from 'next/image'
 
-import introducaoGravidezRadiantePT from '../../assets/img/introducao/introducao-gravidez-radiante-pt-1.svg'
-import introducaoGravidezRadianteMobilePT from '../../assets/img/introducao/introducao-gravidez-radiante-pt-mobile-1.svg'
-
-import introducaoGravidezRadianteES from '../../assets/img/introducao/introducao-gravidez-radiante-es-1.svg'
-import introducaoGravidezRadianteMobileES from '../../assets/img/introducao/introducao-gravidez-radiante-es-mobile-1.svg'
+import teste from '../../assets/img/introducao/teste.svg'
 
 import atencaoGravidezRadiantePT from '../../assets/img/introducao/atencao-gravidez-radiante-pt-1.svg'
 import atencaoGravidezRadianteMobilePT from '../../assets/img/introducao/atencao-gravidez-radiante-pt-mobile-1.svg'
 
+import paraQuem1GravidezRadiantePT from '../../assets/img/introducao/para-quem-2-gravidez-radiante-PT.svg'
+import paraQuem1GravidezRadiantePTMobile from '../../assets/img/introducao/para-quem-2-gravidez-radiante-PT-mobile.svg'
+
 export function getImageByName(name: string) {
   if ('/introducao-gravidez-radiante-pt'.includes(name)) {
-    return  introducaoGravidezRadiantePT
-  } else if ('/introducao-gravidez-radiante-pt-mobile'.includes(name)) {
-    return introducaoGravidezRadianteMobilePT
+    return  teste
   } else if ('introducao/atencao-gravidez-radiante-pt'.includes(name)) {
     return atencaoGravidezRadiantePT
-  } else if ('/introducao-gravidez-radiante-es'.includes(name)) {
-    return introducaoGravidezRadianteES
-  } else if ('/introducao-gravidez-radiante-es-mobile'.includes(name)) {
-    return introducaoGravidezRadianteMobileES
-  } {
+  } else if ('/introducao/para-quem-2-gravidez-radiante-PT'.includes(name)) {
+    return paraQuem1GravidezRadiantePT
+  } else if ('/introducao/para-quem-2-gravidez-radiante-PT-mobile'.includes(name)) {
+    return paraQuem1GravidezRadiantePTMobile
+  } else {
     return atencaoGravidezRadianteMobilePT
   }
 }
+
 interface MyImageProps {
     nameImage: string
     priority?: boolean

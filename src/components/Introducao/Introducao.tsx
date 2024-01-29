@@ -1,59 +1,46 @@
-import { useEffect, useState } from "react";
 import MyImageIntroducao from "../MyImageIntroducao";
 
 interface IntroducaoProps {
-    urlImageIntroducao: string
+    urlImageIntroducao?: string
     urlImageAtencao?: string
+    urlImageParaQuem?: string
 }
 
-const Introducao = ({ urlImageIntroducao, urlImageAtencao }: IntroducaoProps) => {
-    
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [nameImage, setNameImage] = useState(urlImageIntroducao);
-  const [nameImageAtencao, setNameImageAtencao] = useState(urlImageAtencao);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
-
-
-  useEffect(() => {
-    const updateNameForMobile = () => {
-      setNameImage(`${urlImageIntroducao}-mobile`)
-      setNameImageAtencao(`${urlImageAtencao}-mobile`)
-    }
-    
-    const updateImageForOriginalSize = () => {
-      setNameImage(urlImageIntroducao)
-      setNameImageAtencao(urlImageAtencao)
-    }
-  
-    function shouldReturnNameImage(widthSize: number) {
-         if (widthSize < 600 ) {
-          return updateNameForMobile()
-        } else
-        {
-          return updateImageForOriginalSize()
-        }
-    }
-
-      shouldReturnNameImage(windowSize)
-  }, [urlImageAtencao, urlImageIntroducao, windowSize])
+const Introducao = ({ urlImageIntroducao, urlImageAtencao, urlImageParaQuem }: IntroducaoProps) => {
+  const imageAtencaoMobile = `${urlImageAtencao}-mobile`;
+  const imageParaQuemMobile = `${urlImageParaQuem}-mobile`;
 
     return (
       <div className="Introducao">
-        <MyImageIntroducao nameImage={nameImage} />
+        
+        { urlImageIntroducao ? <MyImageIntroducao nameImage={urlImageIntroducao} /> : null }
 
         {
-          urlImageAtencao ? <MyImageIntroducao nameImage={nameImageAtencao!} /> : null
+          urlImageAtencao ? 
+            <>
+              <div className="desktop">
+                <MyImageIntroducao nameImage={urlImageAtencao} />
+              </div>
+    
+              <div className="mobile">
+                <MyImageIntroducao nameImage={imageAtencaoMobile} />
+              </div>
+            </>
+          : null
+        }
+
+        {
+          urlImageParaQuem ? 
+            <>
+              <div className="desktop">
+                <MyImageIntroducao nameImage={urlImageParaQuem} />
+              </div>
+    
+              <div className="mobile">
+                <MyImageIntroducao nameImage={imageParaQuemMobile} />
+              </div>
+            </>
+          : null
         }
         
       </div>

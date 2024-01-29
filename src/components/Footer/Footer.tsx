@@ -1,7 +1,6 @@
 import Image from "next/image";
 import logo from '../../assets/img/logo-azul.svg'
 import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
-import Link from "next/link";
 import Contato__link from "../Contato__link";
 
 interface FooterProps {
@@ -29,15 +28,6 @@ function Footer({deveExibirLogo}: FooterProps) {
         <Contato__link exibirNomeRedeSocial={false} redeSocial='Instagram' href='https://www.instagram.com/mamae_radiante/'>
           <BsInstagram size={30} />
         </Contato__link>
-        {/* <Link href='https://www.facebook.com/profile.php?id=61552364163685' target="blank">
-          <BsFacebook size={30}  />
-        </Link>
-        <Link href='https://www.instagram.com/mamae_radiante/' target="blank">
-          <BsInstagram size={30} />
-        </Link>
-        <Link href='https://api.whatsapp.com/send?phone=5524993230596' target="blank">
-          <BsWhatsapp size={30}  /> 
-        </Link> */}
       </div>
     </footer>
     

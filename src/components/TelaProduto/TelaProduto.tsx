@@ -8,7 +8,6 @@ const Garantia = lazy(() => import('@/components/Garantia'));
 const Faq = lazy(() => import('@/components/condicional/Faq'));
 const HeadlineBonus = lazy(() => import('@/components/HeadlineBonus/HeadlineBonus'));
 const Depoimentos = lazy(() => import('@/components/Depoimentos'));
-const HeadlineFinal = lazy(() => import('@/components/HeadlineFinal'));
 const Aprendizados = lazy(() => import('@/components/Aprendizados'));
 const Capitulos = lazy(() => import('@/components/Capitulos'));
 const BeneficiosBonus = lazy(() => import('@/components/BeneficiosBonus/BeneficiosBonus'));
@@ -25,15 +24,16 @@ import TelaVideo from '../TelaVideo';
 import CardBeneficios from '../CardBeneficios';
 import { useRouter } from 'next/router';
 import PixelDisplay from '../PixelDisplay/PixelDisplay';
-import Contato__link from '../Contato__link';
 import { BsWhatsapp } from 'react-icons/bs';
 import Button from '../Button';
 import Link from 'next/link';
+import Precificacao from '../Precificacao';
 
 interface TelaProdutoProps { ebookAtual: Ebook }
 
 function TelaProduto({ebookAtual}: TelaProdutoProps) {
   const [parametroFacebook, setParametroFacebook] = useState<string>('');
+  const [exibirBotaoCTA, setExibirBotaoCTA] = useState<boolean>(false);
   const [urlComprarComParametro, setUrlComprarComParametro] = useState<string>(ebookAtual.urlComprarProduto);
   const deveExibirPreco = (ebookAtual.bonus.exibirPrecoAposBeneficios && ebookAtual.bonus.exibirPrecoBonus);
   const uuidRotaParabens = '2742f4da-4f27-45d6-b3bc-bca71385ed57';
@@ -78,23 +78,12 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
     
   }, [router.events])
 
-  // useEffect(() => {
-  //   const pegarApenasParametrodaRota = () => {   
-  //     const rotaCompleta = router.asPath;
-  //     const apenasParametro = rotaCompleta.replace(`/${ebookAtual.uuid}`, '');
-   
-  //     console.log('apenasParametro', apenasParametro)
+  useEffect(() => {
+    if (exibirBotaoCTA === false) {
+      setTimeout(() => setExibirBotaoCTA(true), 580000)
+    }
 
-  //     setParametroFacebook(apenasParametro)
-  //     // setUrlComprarComParametro(apenasParametro)
-  //     return apenasParametro
-  //   }
-  //   pegarApenasParametrodaRota()
-
-  //   // const apenasParametro = pegarApenasParametrodaRota()
-  //   // setParametroFacebook(apenasParametro)
-  // },[router.asPath, ebookAtual.uuid])
-
+  }, [exibirBotaoCTA])
 
   useEffect(() => {
     const urlComParametro = `${ebookAtual.urlComprarProduto}?${parametroFacebook}`
@@ -117,13 +106,22 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
       <PixelDisplay language={ebookAtual.linguagem} />
 
       {
-        ebookAtual.existeVideo ? <TelaVideo ebookAtual={ebookAtual} exibirBotaoVerPagina={false} existePixel={false} /> : null
+        ebookAtual.existeVideo ? 
+          <TelaVideo 
+            ebookAtual={ebookAtual} 
+            exibirBotaoVerPagina={false} 
+            existePixel={false} 
+            isVisibleFooter={false}
+            isVisibleWhatsapp={false}
+            isVisibleDepoimentos={false}
+          /> 
+        : null
       }
 
 {
           ebookAtual.existeVideo ? 
           <>
-            <div className='video__button-cta'> 
+            {/* <div className='video__button-cta'> 
               <Link href={urlComprarComParametro}>
                 <Button 
                   className='animation-pulse' 
@@ -133,13 +131,14 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
                   text={ebookAtual.textButtonToBuy}
                 />
               </Link>
-            </div>
+            </div> */}
 
             <CardBeneficios 
               itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
               language={ebookAtual.linguagem} 
               titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
-              exibirBotaoCTA={ebookAtual.existeVideo}
+              exibirBotaoCTA={exibirBotaoCTA}
+              // exibirBotaoCTA={ebookAtual.existeVideo}
               textButtonToBuy={ebookAtual.textButtonToBuy}
               urlComprarProduto={urlComprarComParametro}
             /> 
@@ -160,8 +159,25 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         textButtonToBuy={ebookAtual.textButtonToBuy} 
         urlComprarProduto={urlComprarComParametro}
         urlCapaEbook={ebookAtual.urlImageCapa}
+        isVisibleButton={exibirBotaoCTA}
       />
 
+      {
+        ebookAtual.paraQuemImage ?
+          <Introducao urlImageParaQuem={ebookAtual.paraQuemImage} /> 
+        : null
+      }
+      
+      <Depoimentos 
+        textButtonToBuy={ebookAtual.textButtonToDepoimentos} 
+        nameEbookButton={ebookAtual.nomeEbook}
+        language={ebookAtual.linguagem} 
+        urlImagesDepoimentos={ebookAtual.urlImagesDepoimentos} 
+        tituloDepoimentos={ebookAtual.tituloDepoimentos}
+        urlComprarProduto={urlComprarComParametro}
+        isVisibleButton={exibirBotaoCTA}
+      />
+      
       <Aprendizados 
         aprendizados={ebookAtual.aprendizados} 
         language={ebookAtual.linguagem} 
@@ -170,7 +186,22 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         urlComprarProduto={urlComprarComParametro}
         urlCardAposBeneficios={ebookAtual.urlCardAposBeneficios}
         tituloBeneficios={ebookAtual.tituloBeneficios}
+        isVisibleButton={false}
       />
+
+      {(exibirBotaoCTA === true) ? 
+        <div className='ProdutoEspecifico__content--buy'>
+            <Link href={urlComprarComParametro}>
+              <Button 
+                className='animation-pulse' 
+                variant='neon' 
+                color='Green' 
+                size='Large' 
+                text={ebookAtual.textButtonToBuy} 
+              />
+            </Link>
+        </div>
+      : null }
 
       <div className='CapituloAndPrevia'>
         <div className='CapituloAndPrevia__conteudo'>
@@ -201,27 +232,37 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
           </div>
         </div> 
       </div>
-      
-      <Depoimentos 
-        textButtonToBuy={ebookAtual.textButtonToDepoimentos} 
-        nameEbookButton={ebookAtual.nomeEbook}
-        language={ebookAtual.linguagem} 
-        urlImagesDepoimentos={ebookAtual.urlImagesDepoimentos} 
-        tituloDepoimentos={ebookAtual.tituloDepoimentos}
-        urlComprarProduto={urlComprarComParametro}
-      />
 
-        {/* {
-          ebookAtual.existeVideo ? null :  */}
-            {/* <CardBeneficios 
-              itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
-              language={ebookAtual.linguagem} 
-              titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
-              exibirBotaoCTA={ebookAtual.existeVideo}
-              textButtonToBuy={ebookAtual.textButtonToBuy}
-              urlComprarProduto={urlComprarComParametro}
-            /> */}
-        {/* } */}
+      {
+        ebookAtual.existeVideo ? null :
+          <CardBeneficios 
+            itensHeadlineFinal={ebookAtual.itensHeadlineFinal} 
+            language={ebookAtual.linguagem} 
+            titleHeadlineEbookBonus={ebookAtual.bonus.titleHeadlineEbookBonus} 
+            exibirBotaoCTA={ebookAtual.existeVideo}
+            textButtonToBuy={ebookAtual.textButtonToBuy}
+            urlComprarProduto={urlComprarComParametro}
+          /> 
+      }
+      
+      <Garantia language={ebookAtual.linguagem} />
+
+      {
+        ebookAtual.urlImagePreco ? <Precificacao nameImage={ebookAtual.urlImagePreco} /> : null
+      }
+
+      <div className='ProdutoEspecifico__content--buy'>
+        <Link href={urlComprarComParametro}>
+          <Button 
+            className='animation-pulse' 
+            variant='neon' 
+            color='Green' 
+            size='Large' 
+            text={ebookAtual.textButtonToBuy} 
+          />
+        </Link>
+      </div>
+
 
       {
         ebookAtual.existeEbookBonus ? 
@@ -268,8 +309,6 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         : null
       }
 
-      <Garantia color={ebookAtual.colorNeonGarantia} language={ebookAtual.linguagem} />
-
       {/* <HeadlineFinal 
         language={ebookAtual.linguagem} 
         moeda={ebookAtual.moeda} 
@@ -291,6 +330,20 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
         textoOpcao2HeadlineFinal={ebookAtual.textoOpcao2HeadlineFinal}
         avisoEmbaixoDoPreco={ebookAtual.avisoEmbaixoDoPreco}
       /> */}
+
+      
+
+      <div className='ProdutoEspecifico__content--buy'>
+        <Link href={urlComprarComParametro}>
+          <Button 
+            className='animation-pulse' 
+            variant='neon' 
+            color='Green' 
+            size='Large' 
+            text={ebookAtual.textButtonToBuy} 
+          />
+        </Link>
+      </div>
 
       <SuporteWhatsapp language={ebookAtual.linguagem} urlLinkWhatsapp={ebookAtual.urlLinkWhatsapp} />
 

@@ -18,7 +18,7 @@ function CardEbook({ preco, moeda, children, urlDetalhe }: CardEbookProps) {
         <div className="CardEbook__foto">
           {children}
         </div>
-        <div className="CardEbook__preco">{moeda} {preco}</div>
+        {/* <div className="CardEbook__preco">{moeda} {preco}</div> */}
         <div className="CardEbook__saiba-mais">
           <Link href={`/${urlDetalhe}`}>{getVerDetalhesByLanguage(contextValue)}</Link>
         </div>

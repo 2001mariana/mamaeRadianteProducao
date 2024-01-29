@@ -10,9 +10,18 @@ interface HeadlineProps {
     nameEbookButton: string
     descricaoEbook: string[]
     urlCapaEbook: string
+    isVisibleButton: boolean
 }
 
-const Headline = ({ nameEbook, descricaoEbook, urlComprarProduto, textButtonToBuy, urlCapaEbook, nameEbookButton }: HeadlineProps) => {
+const Headline = ({ 
+    nameEbook, 
+    descricaoEbook, 
+    urlComprarProduto, 
+    textButtonToBuy, 
+    urlCapaEbook, 
+    nameEbookButton,
+    isVisibleButton
+  }: HeadlineProps) => {
   return (
     <div className='ProdutoEspecifico__Headline'>
         <div className='ProdutoEspecifico__image'>
@@ -26,18 +35,23 @@ const Headline = ({ nameEbook, descricaoEbook, urlComprarProduto, textButtonToBu
           <div className='ProdutoEspecifico__content--description'>
             {descricaoEbook.map((descricao) => <span className="Headline__paragrafo" key={descricao}>{descricao}</span>)}
           </div>
-          <div className='ProdutoEspecifico__content--buy'>
-            <Link href={urlComprarProduto}>
-              <Button 
-                className='animation-pulse' 
-                variant='neon' 
-                color='Green' 
-                size='Large' 
-                id={`${nameEbookButton}-1`}
-                text={textButtonToBuy} 
-              />
-            </Link>
-          </div>
+         
+          {
+            isVisibleButton ? 
+              <div className='ProdutoEspecifico__content--buy'>
+                <Link href={urlComprarProduto}>
+                  <Button 
+                    className='animation-pulse' 
+                    variant='neon' 
+                    color='Green' 
+                    size='Large' 
+                    id={`${nameEbookButton}-2`}
+                    text={textButtonToBuy} 
+                  />
+                </Link>
+              </div>
+            : null
+          }
         </div>
       </div>
   )}

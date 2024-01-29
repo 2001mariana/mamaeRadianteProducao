@@ -53,14 +53,26 @@
   height: 130px;
 }
 
+.Introducao > div:first-child {
+  width: 100%;
+}
 
-.Introducao img:not(:first-child){
+.Introducao > div:nth-child(1), .Introducao > div:nth-child(2) {
+  margin: 0 auto;
+}
+
+.Introducao > div:nth-child(1) > img, .Introducao > div:nth-child(2) > img {
+  margin: 0 auto;
+}
+
+.Introducao > div:nth-child(3), .Introducao > div:nth-child(4) {
   margin: 1.25rem auto;
 }
 
-.Introducao img:first-child {
-  width: 100%;
-}
+.Introducao > img:first-child { width: 75%; }
+
+@media only screen and (max-width: 920px) { .Introducao > img:first-child { width: 100%; } }
+
 
 :root {
   --foreground-rgb: 0, 0, 0;

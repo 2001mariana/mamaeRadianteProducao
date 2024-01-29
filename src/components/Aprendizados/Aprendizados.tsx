@@ -12,9 +12,19 @@ interface AprendizadosProps {
     urlComprarProduto: string
     urlCardAposBeneficios: string
     tituloBeneficios?: string[]
+    isVisibleButton: boolean
 }
 
-const Aprendizados = ({ language, aprendizados, nameEbookButton, urlComprarProduto, textButtonToBuy, tituloBeneficios, urlCardAposBeneficios }: AprendizadosProps) => {
+const Aprendizados = ({ 
+    language, 
+    aprendizados, 
+    nameEbookButton, 
+    urlComprarProduto, 
+    textButtonToBuy, 
+    tituloBeneficios, 
+    urlCardAposBeneficios,
+    isVisibleButton
+  }: AprendizadosProps) => {
   const urlCardAposBeneficiosMobile = `${urlCardAposBeneficios}-mobile`
 
   return (
@@ -42,18 +52,23 @@ const Aprendizados = ({ language, aprendizados, nameEbookButton, urlComprarProdu
           <MyImage nameImage={urlCardAposBeneficiosMobile} />
         </div>
         
-        <div className='ProdutoEspecifico__content--buy'>
-          <Link href={urlComprarProduto}>
-              <Button 
-                className='animation-pulse' 
-                variant='neon' 
-                color='Green' 
-                size='Large' 
-                id={`${nameEbookButton}-2`}
-                text={textButtonToBuy} 
-              />
-            </Link>
-        </div>
+        {
+          isVisibleButton ? 
+            <div className='ProdutoEspecifico__content--buy'>
+              <Link href={urlComprarProduto}>
+                <Button 
+                  className='animation-pulse' 
+                  variant='neon' 
+                  color='Green' 
+                  size='Large' 
+                  id={`${nameEbookButton}-2`}
+                  text={textButtonToBuy} 
+                />
+              </Link>
+            </div>
+          : null
+        }
+        
       </div>
     )
 }

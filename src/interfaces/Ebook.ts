@@ -12,8 +12,11 @@ export default interface Ebook {
     precoMaior: string
     precoMenor: string
     descricao: string[]
+    paraQuem?: boolean
+    paraQuemImage?: string
+    paraQuemImage2?: string
     tituloBeneficios: string[]
-    tituloDepoimentos: string
+    tituloDepoimentos: string[]
     tituloBonus: string
     tituloHeadlineFinal: string[]
     subtituloHeadlineFinal?: string
@@ -35,8 +38,9 @@ export default interface Ebook {
     colorNeonGarantia: 'Green' | 'Purple' | 'Orange' | 'Blue'
     urlImagesPrevia: string[]
     urlImagesDepoimentos: string[]
-    urlImageIntroducao?: string;
-    urlImageIntroducaoAtencao?: string;
+    urlImageIntroducao?: string
+    urlImageIntroducaoAtencao?: string
+    urlImagePreco?: string
     urlImageCapa: string
     urlImageCapaSecudaria: string
     urlImageCapaBonus: string 

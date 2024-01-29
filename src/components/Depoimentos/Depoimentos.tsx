@@ -12,10 +12,19 @@ interface DepoimentosProps {
     textButtonToBuy: string
     nameEbookButton: string
     urlComprarProduto: string
-    tituloDepoimentos?: string
+    tituloDepoimentos?: string[]
+    isVisibleButton: boolean
 }
 
-const Depoimentos = ({ language, urlImagesDepoimentos, textButtonToBuy, nameEbookButton, tituloDepoimentos, urlComprarProduto }: DepoimentosProps) => {
+const Depoimentos = ({ 
+    language, 
+    urlImagesDepoimentos, 
+    textButtonToBuy, 
+    nameEbookButton, 
+    tituloDepoimentos, 
+    urlComprarProduto, 
+    isVisibleButton = true
+  }: DepoimentosProps) => {
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
@@ -50,8 +59,16 @@ const Depoimentos = ({ language, urlImagesDepoimentos, textButtonToBuy, nameEboo
   return (
     <div className='Depoimentos'>
       <span className='ProdutoEspecifico__tittle'>
-        { tituloDepoimentos ? tituloDepoimentos : getTittleByLanguage(language) }
-      </span>
+        { tituloDepoimentos ? 
+            tituloDepoimentos.map((titulo) => 
+              <span key={titulo} className='ProdutoEspecifico__tittle--column'>
+                {titulo}
+              </span>) 
+          : 
+            getTittleByLanguage(language)
+        }
+      </span> 
+
       <div className='Depoimentos--carrosel'>
         <Carousel 
           slidesToShow={shouldReturnNumberSlidesToShow(windowSize)}
@@ -71,18 +88,23 @@ const Depoimentos = ({ language, urlImagesDepoimentos, textButtonToBuy, nameEboo
         </Carousel>
       </div>
       
-      <div className="Depoimentos__Button">
-        <Link href={urlComprarProduto}>
-          <Button 
-            className='animation-pulse' 
-            variant='neon' 
-            color='Green' 
-            size='Large' 
-            id={`${nameEbookButton}-3`}
-            text={textButtonToBuy} 
-          />
-        </Link>
-      </div>
+      {
+        isVisibleButton ? 
+          <div className="Depoimentos__Button">
+            <Link href={urlComprarProduto}>
+              <Button 
+                className='animation-pulse' 
+                variant='neon' 
+                color='Green' 
+                size='Large' 
+                id={`${nameEbookButton}-3`}
+                text={textButtonToBuy} 
+              />
+            </Link>
+          </div>
+        : null
+      }
+
     </div>
 )}
 

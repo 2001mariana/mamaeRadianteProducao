@@ -46,7 +46,11 @@ function Index(props: {
     return  <TelaVideo 
               ebookAtual={ebookAtual}
               existePixel
+              // existeVideo
               exibirBotaoVerPagina
+              isVisibleFooter
+              isVisibleWhatsapp
+              isVisibleDepoimentos
             />
   } else {
     return <NotFound />

@@ -33,14 +33,14 @@ const CardBeneficios = ({
         </div>
         <div className='ProdutoEspecifico__headline--itens'>
           {itensHeadlineFinal.map((item) => 
-            <div className={`CardNeon--White ${item.icon}`} key={item.item}>
+            <div className={`CardNeon--Purple ${item.icon}`} key={item.item}>
               <div><MyImageIcons nameImage={item.icon} /></div>
               {item.item}
             </div>
           )}
         </div>
         { exibirBotaoCTA ? 
-            <div className="CardBeneficios__button">
+            <div className="CardBeneficios__button mobile">
               <Link className='ProdutoEspecifico__headline--button-buy' href={urlComprarProduto}>
                 <Button 
                     className='animation-pulse' 
