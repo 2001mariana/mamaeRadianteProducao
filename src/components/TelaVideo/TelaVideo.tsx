@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import PixelDisplay from '../PixelDisplay/PixelDisplay';
 import SuporteWhatsapp from '../SuporteWhatsapp/SuporteWhatsapp';
 import Footer from '../Footer';
+import YouTubePlayer from '../YoutubePlayer/YoutubePlayer';
 const Depoimentos = lazy(() => import('@/components/Depoimentos'));
 
 interface TelaVideoProps { 
@@ -32,12 +33,10 @@ function TelaVideo({
   const [urlComprarComParametro, setUrlComprarComParametro] = useState<string>(ebookAtual.urlComprarProduto);  
   const router = useRouter();  
 
-  useEffect(() => {
-    if (exibirBotaoCTA === false) {
-      setTimeout(() => setExibirBotaoCTA(true), 580000)
-    }
-
-  }, [exibirBotaoCTA])
+  
+  const iniciarTemporizadorExibirBotao = () => {
+    setTimeout(() => setExibirBotaoCTA(true), 280000)
+  }
 
   useEffect(() => {
     const pegarApenasParametrodaRota = () => {   
@@ -69,14 +68,8 @@ function TelaVideo({
         urlImageAtencao={ebookAtual.urlImageIntroducaoAtencao}
       /> 
 
-      <div className='ProdutoEspecifico__video' onFocus={() => console.log("Test focus")}>
-        <iframe  
-          width="100%" 
-          height="100%" 
-          src={ebookAtual.urlVideoYoutube} 
-          title="YouTube video player" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; allowfullscreen"
-        />
+      <div className='ProdutoEspecifico__video'>
+        <YouTubePlayer iniciarTemporizador={iniciarTemporizadorExibirBotao} />
       </div>
 
       {(exibirBotaoCTA === true) ? 

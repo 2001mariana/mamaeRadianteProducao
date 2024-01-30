@@ -1,7 +1,7 @@
 export default interface Ebook {
     uuid: string
     uuidVideo: string
-    urlVideoYoutube: string
+    idVideoYoutube: string
     headlineVideo?: string
     existeEbookBonus: boolean
     exibirIntroducao: boolean

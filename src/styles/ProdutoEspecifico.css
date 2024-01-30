@@ -268,7 +268,10 @@
   .ProdutoEspecifico__funil--confetti > div { width: 50%; }
   .ProdutoEspecifico__funil--confetti > div:nth-child(3n) { display: none; }
   .ProdutoEspecifico__funil--parabens { font-size: 34px; }
-  .ProdutoEspecifico__video { width: 80% !important; height: 40vh !important; }  
+  .ProdutoEspecifico__video { 
+    width: 80% !important; 
+    height: 60vh !important; 
+  }  
 }
 @media only screen and (max-width: 750px) {
   .Depoimentos--images > .Depoimento { margin: 1%; }  
@@ -285,17 +288,18 @@
     top: -95px;
   }
   .ProdutoEspecifico__funil > .ProdutoEspecifico__funil--confetti { height: 65%; }
-  .ProdutoEspecifico__video { width: 90% !important; height: 30vh !important; }  
+  .ProdutoEspecifico__video { 
+    width: 90% !important; 
+    /* height: 50vh !important;  */
+  }  
 }
 @media only screen and (max-width: 660px) {  
   div.HeadlineFinal.HeadlineBonus .dynamic__image img { height: auto; max-width: 110% !important; }
   div.HeadlineFinal.HeadlineBonus > div.HeadlineBonus__content.second-option > div.car { display: flex; flex-direction: column; }
   div.HeadlineFinal.HeadlineBonus > div.HeadlineBonus__content.second-option > div.car > img { width: 80vw; }
   .ProdutoEspecifico__funil--parabens { top: -75px; }
-  /* .MyImageCardCuidado.desktop, .Garantia > .desktop { display: none !important; } */
   .desktop { display: none !important; }
   .mobile  { display: block !important; }
-  /* .MyImageCardCuidado.mobile, .Garantia > .mobile, .CardBeneficios__button.mobile  { display: block !important; } */
   .MyImageCardCuidado { width: 90%; margin: 8% auto;}
   .video__button-cta { flex-direction: column !important;  gap: 25px !important; }
 }

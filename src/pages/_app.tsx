@@ -31,6 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <LanguageContext.Provider value={{updateContext: updateSelectedLanguage, contextValue: defaultBrowserLanguage}}>
                     <div className='App--content'>
                         <Component {...pageProps} />
+                        <Script src="https://www.youtube.com/iframe_api" />
                         <Script src="https://www.googletagmanager.com/gtag/js?id=G-EVY1Q6GR61" />
                         <Script
                           id='google-analytics'

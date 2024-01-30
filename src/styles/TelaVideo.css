@@ -5,7 +5,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid fuchsia; */
+}
+
+.ProdutoEspecifico__video > div, .ProdutoEspecifico__video > div > iframe {
+  width: 100%;
+  border: 1px solid #00000090;
+  border-radius: 6px;
 }
 
 .video__button-cta { 

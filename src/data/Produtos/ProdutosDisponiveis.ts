@@ -6,7 +6,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: 'bfe7c2ec-307a-47f7-aeaf-a752270956c3',
         uuidVideo: 'bfe7c2ec-307a-47f7-aeaf-a752270956c3',
-        urlVideoYoutube: 'https://www.youtube.com/embed/7FUALx4l6No?si=eW4nntjuMAqOsZR1',
+        idVideoYoutube: '7FUALx4l6No',
         existeEbookBonus: true,
         isFunil: false,
         existeTerceiroBonus: false,
@@ -102,7 +102,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2198f56a-5627-56d6-b3bc-bca71385ef58',
         uuidVideo: '2198f56a-5627-56d6-b3bc-bca71385ef58',
-        urlVideoYoutube: 'https://www.youtube.com/embed/7FUALx4l6No?si=eW4nntjuMAqOsZR1',
+        idVideoYoutube: '7FUALx4l6No',
         existeEbookBonus: true,
         isFunil: false,
         existeTerceiroBonus: false,
@@ -201,7 +201,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2149yz8a-5627-56d6-b3bc-bca71385ef58',
         uuidVideo: '2149yz8a-5627-56d6-b3bc-bca71385ef58',
-        urlVideoYoutube: 'https://www.youtube.com/embed/7FUALx4l6No?si=eW4nntjuMAqOsZR1',
+        idVideoYoutube: '7FUALx4l6No',
         existeEbookBonus: false,
         isFunil: true,
         existeTerceiroBonus: false,
@@ -302,7 +302,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '289477ec-307a-47f7-aeaf-a752270956c3',
         uuidVideo: '289477ec-307a-47f7-aeaf-a752270956c3',
-        urlVideoYoutube: 'https://www.youtube.com/embed/7FUALx4l6No?si=eW4nntjuMAqOsZR1',
+        idVideoYoutube: '7FUALx4l6No',
         existeEbookBonus: false,
         isFunil: true,
         existeTerceiroBonus: false,
@@ -400,7 +400,7 @@ export const ProdutosDisponiveis: Ebook[] = [
         uuidVideo: '0a68673d-6cea-4b8e-9cf9-dfd940f41a5f',
         existeEbookBonus: true,
         headlineVideo: 'Assista o video e descubra como é ter uma Gravidez Radiante:',
-        urlVideoYoutube: 'https://www.youtube.com/embed/7FUALx4l6No?si=eW4nntjuMAqOsZR1',
+        idVideoYoutube: '7FUALx4l6No',
         isFunil: false,
         existeTerceiroBonus: false,
         existeVideo: true,
@@ -500,7 +500,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2198f4da-4f27-45d6-b3bc-bca71385ed57',
         uuidVideo: '2198f4da-4f27-45d6-b3bc-bca71385ed57',
-        urlVideoYoutube: 'https://www.youtube.com/embed/7FUALx4l6No?si=eW4nntjuMAqOsZR1',
+        idVideoYoutube: '7FUALx4l6No',
         existeEbookBonus: true,
         isFunil: false,
         existeTerceiroBonus: false,
@@ -598,7 +598,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2198f4da-4f27-45d6-b3bc-bca71385ef58',
         uuidVideo: '2198f4da-4f27-45d6-b3bc-bca71385ef58',
-        urlVideoYoutube: 'https://www.youtube.com/embed/7FUALx4l6No?si=eW4nntjuMAqOsZR1',
+        idVideoYoutube: '7FUALx4l6No',
         existeEbookBonus: true,
         isFunil: false,
         existeTerceiroBonus: false,
@@ -694,7 +694,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2742f4da-4f27-45d6-b3bc-bca71385ed57',
         uuidVideo: '2742f4da-4f27-45d6-b3bc-bca71385ed57',
-        urlVideoYoutube: 'https://www.youtube.com/embed/7FUALx4l6No?si=eW4nntjuMAqOsZR1',
+        idVideoYoutube: '7FUALx4l6No',
         existeEbookBonus: true,
         isFunil: true,
         existeTerceiroBonus: true,
@@ -804,7 +804,7 @@ export const ProdutosDisponiveis: Ebook[] = [
     {
         uuid: '2897e359-4f27-45d6-b3bc-bca71385ed57',
         uuidVideo: '2897e359-4f27-45d6-b3bc-bca71385ed57',
-        urlVideoYoutube: 'https://www.youtube.com/embed/7FUALx4l6No?si=eW4nntjuMAqOsZR1',
+        idVideoYoutube: '7FUALx4l6No',
         existeEbookBonus: true,
         isFunil: true,
         existeTerceiroBonus: true,
