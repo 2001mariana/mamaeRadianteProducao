@@ -103,7 +103,7 @@ function TelaProduto({ebookAtual}: TelaProdutoProps) {
             
     <div className='ProdutoEspecifico' id={`headline--${ebookAtual.idStyledByProduct}`}>
 
-      <PixelDisplay language={ebookAtual.linguagem} />
+      {/* <PixelDisplay language={ebookAtual.linguagem} /> */}
 
       {
         ebookAtual.existeVideo ? 
