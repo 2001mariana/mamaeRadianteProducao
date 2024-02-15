@@ -35,7 +35,7 @@ function TelaVideo({
 
   
   const iniciarTemporizadorExibirBotao = () => {
-    setTimeout(() => setExibirBotaoCTA(true), 280000)
+    setTimeout(() => setExibirBotaoCTA(true), 180000)
   }
 
   useEffect(() => {
